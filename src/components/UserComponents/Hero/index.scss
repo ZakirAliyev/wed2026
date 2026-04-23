@@ -1,0 +1,336 @@
+#hero {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  padding: 12px 16px;
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  // ─── Sidebar Left ────────────────────────────────────
+  .sidebar-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    z-index: 10;
+
+    span {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a {
+        color: white;
+        font-size: 18px;
+        opacity: 0.8;
+        transition: opacity 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+          color: #E0DD58;
+        }
+      }
+    }
+  }
+
+  // ─── Sidebar Right ───────────────────────────────────
+  .sidebar-right {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    .step-tracker {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+
+      .steps-text {
+        display: flex;
+        flex-direction: column;
+
+        .step-item {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 16px;
+          font-weight: 400;
+          opacity: 0.6;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+
+          .idle { transition: all 0.3s ease; }
+
+          .hover {
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+          }
+
+          &:first-child {
+            font-size: 18px;
+            font-weight: 400;
+          }
+
+          &:hover {
+            opacity: 1;
+            .idle { opacity: 0; visibility: hidden; transform: translateX(-10px); }
+            .hover { opacity: 1; visibility: visible; transform: translateX(0); }
+          }
+
+          &.active { opacity: 1; font-weight: 600; }
+        }
+      }
+
+      .line-container {
+        position: relative;
+        width: 4px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+
+        .active-bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          background: white;
+          border-radius: 10px;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+
+  // ─── Hero Content ────────────────────────────────────
+  .hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    .tagline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+
+      .line {
+        width: 30px;
+        height: 2px;
+        background: #E0DD58;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 600;
+        color: #E0DD58;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hosted {
+      font-size: 15px;
+      opacity: 0.9;
+      font-weight: 400;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      max-width: 420px;
+
+      span {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    // Location pill: icon + text inline
+    .location-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 24px;
+
+      .icon {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+        opacity: 0.85;
+      }
+
+      span {
+        opacity: 0.9;
+      }
+    }
+
+    // Days badge — hidden on desktop, shown on mobile
+    .days-badge {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: rgba(15, 20, 10, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      padding: 10px 20px;
+      margin-top: 8px;
+
+      .sun {
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .days-text {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+
+        strong {
+          font-size: 18px;
+          font-weight: 700;
+          color: #E0DD58;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+// ─── Tablet ──────────────────────────────────────────────
+@media screen and (max-width: 992px) {
+  #hero {
+    padding: 0 40px;
+
+    .sidebar-left {
+      display: none;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+      text-align: left;
+
+      h1 { font-size: 42px; }
+    }
+  }
+}
+
+// ─── Mobile ──────────────────────────────────────────────
+@media screen and (max-width: 576px) {
+  #hero {
+    padding: 0 0;
+    align-items: flex-end;
+    padding-bottom: 0;
+
+    .container {
+      align-items: flex-end;
+      padding: 0;
+    }
+
+    .sidebar-left {
+      display: none;
+    }
+
+    // Sidebar right — visible on mobile, stacked right
+    .sidebar-right {
+      right: 0;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    .hero-content {
+      width: 100%;
+      align-items: flex-start;
+      text-align: left;
+      padding: 0 20px 40px;
+      position: relative;
+      z-index: 5;
+
+      .tagline p {
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+
+      .hosted {
+        font-size: 13px;
+        max-width: 280px;
+        margin-bottom: 16px;
+      }
+
+      .location-pill {
+        font-size: 13px;
+        gap: 6px;
+        margin-bottom: 20px;
+
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      // Show days badge on mobile
+      .days-badge {
+        display: flex;
+      }
+    }
+  }
+}
+
+// ─── Very small ─────────────────────────────────────────
+@media screen and (max-width: 380px) {
+  #hero {
+    .hero-content {
+      h1 { font-size: 30px; }
+    }
+  }
+}

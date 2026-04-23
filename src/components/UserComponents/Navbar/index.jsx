@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './index.scss';
 import logo from "../../../assets/logo.png";
@@ -7,11 +7,25 @@ import Countdown from '../Countdown';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
     const isAboutPage = location.pathname === '/about';
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 400) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section id="navbar">
+        <section id="navbar" className={scrolled ? 'scrolled' : ''}>
             <div className="container">
                 <nav>
                     <div className="branding">

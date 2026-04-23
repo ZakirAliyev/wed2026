@@ -3,6 +3,7 @@ import './index.scss';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import location from '../../../assets/location.png';
 import calendar from '../../../assets/calendar.png';
+import Countdown from '../Countdown';
 
 function Hero() {
     const [activeStep, setActiveStep] = useState(0);
@@ -52,11 +53,7 @@ function Hero() {
                         <span>5–6 June</span>
                     </div>
 
-                    {/* Days badge — mobile only */}
-                    <div className="days-badge">
-                        <span className="sun">☀</span>
-                        <span className="days-text"><strong>{daysLeft}</strong> days to go!</span>
-                    </div>
+                   <Countdown/>
                 </div>
 
                 <div className="sidebar-right">

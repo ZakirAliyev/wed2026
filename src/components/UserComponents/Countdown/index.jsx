@@ -27,7 +27,7 @@ function Countdown() {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             setTimeLeft({
-                days: days.toString().padStart(2, '0'),
+                days: days.toString(),
                 hours: hours.toString().padStart(2, '0'),
                 minutes: minutes.toString().padStart(2, '0'),
                 seconds: seconds.toString().padStart(2, '0')
@@ -38,25 +38,18 @@ function Countdown() {
     }, []);
 
     return (
-        <div className="countdown">
-            <div className="box">
-                <span className="number">{timeLeft.days}</span>
-                <span className="label">Days</span>
+        <div className="new-countdown">
+            <div className="left-side">
+                <div className="circle-icon">
+                    <div className="inner-circle"></div>
+                </div>
             </div>
-            <span className="separator">:</span>
-            <div className="box">
-                <span className="number">{timeLeft.hours}</span>
-                <span className="label">Hours</span>
-            </div>
-            <span className="separator">:</span>
-            <div className="box">
-                <span className="number">{timeLeft.minutes}</span>
-                <span className="label">Minutes</span>
-            </div>
-            <span className="separator">:</span>
-            <div className="box">
-                <span className="number">{timeLeft.seconds}</span>
-                <span className="label">Seconds</span>
+            <div className="right-side">
+                <span className="days-number">{timeLeft.days}</span>
+                <div className="days-label">
+                    <span className="days-word">days</span>
+                    <span className="to-go">to go!</span>
+                </div>
             </div>
         </div>
     );

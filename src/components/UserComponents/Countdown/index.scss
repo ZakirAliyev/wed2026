@@ -1,71 +1,130 @@
-.countdown {
+.new-countdown {
   display: flex;
-  align-items: center;
-  background: #E0DD58;
-  padding: 12px 12px 8px;
-  gap: 12px;
-  color: #202020;
-  border-radius: 4px;
+  align-items: stretch;
+  height: 120px;
+  width: fit-content;
+  min-width: 380px;
+  background: #BCC6D3;
+  border-radius: 40px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  scale: 0.5;
 
-  .box {
+  .left-side {
+    flex: 0 0 35%;
+    background: #B9C6D3;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 20px;
 
-    .number {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .label {
-      font-size: 9px;
-      font-weight: 500;
-      text-transform: capitalize;
+    .circle-icon {
+      width: 70px;
+      height: 70px;
+      background: #EFEF3D;
+      border: 5px solid #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-  .separator {
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: -12px;
+  .right-side {
+    flex: 1;
+    background: #99BB60;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 15px;
+
+    .days-number {
+      font-size: 80px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .days-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFFFFF;
+      text-transform: lowercase;
+
+      .days-word {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 0.9;
+      }
+
+      .to-go {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 0.9;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 576px) {
-  .countdown {
-    padding: 6px 10px 5px;
-    gap: 8px;
+  .new-countdown {
+    height: 90px;
+    min-width: 300px;
+    border-radius: 30px;
 
-    .box {
-      .number {
-        font-size: 18px;
-      }
-
-      .label {
-        font-size: 8px;
+    .left-side {
+      padding: 15px;
+      .circle-icon {
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
       }
     }
 
-    .separator {
-      font-size: 18px;
-      margin-top: -8px;
+    .right-side {
+      padding: 0 20px;
+
+      .days-number {
+        font-size: 56px;
+      }
+
+      .days-label {
+        .days-word, .to-go {
+          font-size: 24px;
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 380px) {
-  .countdown {
-    gap: 5px;
-    padding: 5px 8px 4px;
+@media screen and (max-width: 400px) {
+  .new-countdown {
+    height: 70px;
+    min-width: 260px;
+    border-radius: 25px;
 
-    .box .number {
-      font-size: 16px;
+    .left-side {
+      padding: 10px;
+      .circle-icon {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
+      }
     }
 
-    .separator {
-      font-size: 16px;
+    .right-side {
+      padding: 0 15px;
+
+      .days-number {
+        font-size: 40px;
+      }
+
+      .days-label {
+        .days-word, .to-go {
+          font-size: 18px;
+        }
+      }
     }
   }
 }

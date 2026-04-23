@@ -33,7 +33,7 @@ function Themes() {
         <section id="themes">
             <div className="container">
                 {themes.map((theme, index) => (
-                    <div className={`theme-item ${theme.reverse ? 'reverse' : ''}`} key={index}>
+                    <div className={`theme-item ${theme.reverse ? 'reverse' : ''}`} key={index} id={`theme-${theme.number}`}>
                         <div className="theme-content" data-aos={theme.reverse ? "fade-left" : "fade-right"} data-aos-delay="100">
                             <span className="theme-number">{theme.number}</span>
                             <h2 className="theme-title">{theme.title}</h2>

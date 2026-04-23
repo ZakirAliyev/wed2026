@@ -4,19 +4,28 @@ import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import location from '../../../assets/location.png';
 import calendar from '../../../assets/calendar.png';
 import Countdown from '../Countdown';
-import {useMediaQuery} from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 import arrow from "/src/assets/arrow.png"
 
 function Hero() {
     const [activeStep, setActiveStep] = useState(0);
     const [daysLeft, setDaysLeft] = useState(0);
-const isMobile = useMediaQuery({maxWidth:"768px"});
+    const isMobile = useMediaQuery({ maxWidth: "768px" });
     const steps = [
         { idle: 'Start', hover: 'Start' },
-        { idle: '1', hover: 'Home' },
-        { idle: '2', hover: 'About' },
-        { idle: '3', hover: 'Contact' }
+        { idle: '1', hover: 'Forest' },
+        { idle: '2', hover: 'Urban' },
+        { idle: '3', hover: 'Energy' }
     ];
+
+    const handleStepClick = (index) => {
+        setActiveStep(index);
+        const sectionId = index === 0 ? 'hero' : `theme-0${index}`;
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         const targetDate = new Date('June 5, 2026 00:00:00').getTime();
@@ -46,7 +55,7 @@ const isMobile = useMediaQuery({maxWidth:"768px"});
 
                     <p className="hosted" data-aos="fade-up" data-aos-delay="800">
                         scroll down
-                        <img src={arrow} alt={"bottom"} className={"arrow"}/>
+                        <img src={arrow} alt={"bottom"} className={"arrow"} />
                         Hosted by the Ministry of <span>Ecology and Natural Resources of Azerbaijan</span>
                     </p>
 
@@ -60,7 +69,7 @@ const isMobile = useMediaQuery({maxWidth:"768px"});
                 </div>
 
                 <div className="countdown-wrapper">
-                    <Countdown/>
+                    <Countdown />
                 </div>
 
                 <div className="sidebar-right">
@@ -75,7 +84,7 @@ const isMobile = useMediaQuery({maxWidth:"768px"});
                                 <div
                                     key={index}
                                     className={`step-item ${activeStep === index ? 'active' : ''}`}
-                                    onClick={() => setActiveStep(index)}
+                                    onClick={() => handleStepClick(index)}
                                 >
                                     <span className="idle">{step.idle}</span>
                                     <span className="hover">{step.hover}</span>

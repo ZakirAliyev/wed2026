@@ -1,54 +1,66 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import Lottie from 'lottie-react';
+import originalAnimationData from '../../../assets/daysToGo.json';
 import './index.scss';
 
 function Countdown() {
     const [timeLeft, setTimeLeft] = useState({
-        days: '00',
-        hours: '00',
-        minutes: '00',
-        seconds: '00'
+        days: '0'
     });
 
     useEffect(() => {
         const targetDate = new Date('June 5, 2026 00:00:00').getTime();
 
-        const timer = setInterval(() => {
+        const calculateTime = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
             if (distance < 0) {
-                clearInterval(timer);
+                setTimeLeft({ days: '0' });
                 return;
             }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
             setTimeLeft({
-                days: days.toString(),
-                hours: hours.toString().padStart(2, '0'),
-                minutes: minutes.toString().padStart(2, '0'),
-                seconds: seconds.toString().padStart(2, '0')
+                days: days.toString()
             });
-        }, 1000);
+        };
+
+        calculateTime(); // Initial run
+        const timer = setInterval(calculateTime, 1000 * 60 * 60); // Check every hour
 
         return () => clearInterval(timer);
     }, []);
 
+    // Stabilize animationData - hide internal text once
+    const animationData = useMemo(() => {
+        const data = JSON.parse(JSON.stringify(originalAnimationData));
+        data.layers.forEach(layer => {
+            if (layer.nm === "123" || layer.nm === "days to go!") {
+                if (layer.t && layer.t.d && layer.t.d.k[0]) {
+                    layer.t.d.k[0].s.t = ""; // Hide internal text
+                }
+            }
+        });
+        return data;
+    }, []);
+
     return (
-        <div className="new-countdown">
-            <div className="left-side">
-                <div className="circle-icon">
-                    <div className="inner-circle"></div>
-                </div>
-            </div>
-            <div className="right-side">
-                <span className="days-number">{timeLeft.days}</span>
-                <div className="days-label">
-                    <span className="days-word">days</span>
-                    <span className="to-go">to go!</span>
+        <div className="lottie-countdown-wrapper">
+            <div className="lottie-container-relative">
+                <Lottie 
+                    animationData={animationData} 
+                    loop={true} 
+                    className="lottie-player"
+                />
+                
+                {/* Dynamic Overlay */}
+                <div className="countdown-overlay-content">
+                    <span className="overlay-number">{timeLeft.days}</span>
+                    <div className="overlay-label">
+                        <span>days</span>
+                        <span>to go!</span>
+                    </div>
                 </div>
             </div>
         </div>

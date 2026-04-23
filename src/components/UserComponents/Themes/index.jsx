@@ -1,38 +1,41 @@
 import './index.scss';
-import tebiet from '../../../assets/tebiet.png';
-import tebiet2 from '../../../assets/tebiet2.png';
-import tebiet3 from '../../../assets/tebiet3.png';
-import arrow from '../../../assets/arrow.png';
+import tebiet from '../../../assets/tebiet.webp';
+import tebiet2 from '../../../assets/tebiet2.webp';
+import tebiet3 from '../../../assets/tebiet3.webp';
+import arrow from '../../../assets/arrow.webp';
 
 const themes = [
     {
         number: '01',
-        title: 'Forest Restoration',
-        description: 'Extensive reforestation and afforestation programs are being implemented to restore degraded lands and expand green coverage across the country.',
+        title: 'Biodiversity conservation and ecosystem restoration',
+        description: 'Azerbaijan is expanding nature protected areas, restoring degraded forests and lands, ecosystems from the Caspian Sea coastline to inland landscapes through afforestation, biodiversity conservation and sustainable environmental management practices to strengthen climate resilience, positioning nature as a key solution to climate change.',
         linkText: 'Watch Climate Story'
     },
     {
         number: '02',
-        title: 'Development of Green Urban Environments',
-        description: 'Urban sustainability is being promoted through the expansion of green spaces, investment in eco-friendly public transportation, and the adoption of sustainable building practices.',
+        title: 'Climate action',
+        description: 'Azerbaijan aims to balance socio-economic priorities with environmental sustainability, ensuring that climate action efforts across the economy align with the country’s commitments under NDC 3.0 within the framework of the Paris Agreement, while reinforcing its national policy framework to support sustainable development.',
         linkText: 'Watch Climate Story',
         reverse: true
     },
     {
         number: '03',
-        title: 'Clean and Renewable Energy Sources',
-        description: 'Azerbaijan is accelerating its transition toward renewable energy by investing in large-scale solar and wind projects.hese initiatives aim not only to reduce greenhouse gas emissions, but also to strengthen long-term energy security and diversify the national energy mix.',
+        title: 'Renewable Energy',
+        description: 'Azeribaijan is accelerating its transition to renewable energy through large-scale solar and wind projects. Strategic investments aim to reduce emissions, increase energy efficiency, and support clean energy future.',
         linkText: 'Watch Climate Story'
     }
 ];
 
 import { motion } from 'framer-motion';
 
+import { useMediaQuery } from "react-responsive";
+
 function Themes() {
+    const isMobile = useMediaQuery({ maxWidth: "768px" });
     const themeImages = [tebiet, tebiet2, tebiet3];
 
     const cardVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: isMobile ? 30 : 50 },
         visible: { 
             opacity: 1, 
             y: 0,
@@ -44,12 +47,17 @@ function Themes() {
     };
 
     const imageVariants = {
-        hidden: { scale: 0.8, opacity: 0 },
+        hidden: { 
+            scale: isMobile ? 1 : 0.9, 
+            opacity: 0,
+            y: isMobile ? 20 : 0
+        },
         visible: { 
             scale: 1, 
             opacity: 1,
+            y: 0,
             transition: {
-                duration: 1,
+                duration: isMobile ? 0.6 : 1,
                 ease: [0.33, 1, 0.68, 1]
             }
         }
@@ -65,7 +73,7 @@ function Themes() {
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: false, margin: "-100px" }}
                         >
                             <span className="theme-number">{theme.number}</span>
                             <h2 className="theme-title">{theme.title}</h2>
@@ -79,7 +87,7 @@ function Themes() {
                             variants={imageVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: false, margin: "-100px" }}
                         >
                             <img src={themeImages[index]} alt={theme.title} />
                         </motion.div>

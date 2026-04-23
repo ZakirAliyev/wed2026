@@ -31,9 +31,13 @@
       background-position: 0 center;
       animation: scrollPattern 30s linear infinite;
       height: 200px;
-      top: 150px;
+      top: 14%;
       will-change: background-position;
       opacity: 0.15;
+
+      @media screen and (max-width: 380px) {
+        top: 12%;
+      }
     }
 
     &.hero-daglar {

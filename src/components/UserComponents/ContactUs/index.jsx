@@ -20,7 +20,7 @@ function ContactUs() {
                     className="contact-info"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                     transition={{ staggerChildren: 0.1 }}
                 >
                     <motion.span className="small-tag" variants={fadeUp}>WED 2026</motion.span>

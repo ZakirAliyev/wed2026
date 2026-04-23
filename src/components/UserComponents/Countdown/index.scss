@@ -1,134 +1,52 @@
-.new-countdown {
+.lottie-countdown-wrapper {
   display: flex;
-  align-items: stretch;
-  height: 100px;
-  width: fit-content;
-  min-width: max-content;
-  background: #BCC6D3;
-  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 50px; 
+  width: auto;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  scale: 0.5;
 
-  .left-side {
-    flex: 0 0 35%;
-    background: #B9C6D3;
+  .lottie-container-relative {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
-
-    .circle-icon {
-      width: 64px;
-      height: 64px;
-      background: #EFEF3D;
-      border: 5px solid #FFFFFF;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
-  .right-side {
-    flex: 1;
-    background: #99BB60;
+  .lottie-player {
+    height: 160px; 
+    width: 220px; 
+    object-fit: contain;
     display: flex;
     align-items: center;
-    padding: 0 30px;
-    gap: 15px;
-    border-radius: 20px;
+    justify-content: center;
+  }
 
-    .days-number {
-      font-size: 60px;
-      font-weight: 800;
-      color: #FFFFFF;
+  .countdown-overlay-content {
+    position: absolute;
+    right: 60px; // Perfectly centered now
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    pointer-events: none;
+
+    .overlay-number {
+      font-size: 22px;
+      font-weight: 700;
       line-height: 1;
     }
 
-    .days-label {
+    .overlay-label {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      color: #FFFFFF;
+      font-size: 9px;
+      font-weight: 600;
+      line-height: 1.1;
       text-transform: lowercase;
-      width: 90px;
-
-      .days-word {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 0.9;
-      }
-
-      .to-go {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 0.9;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .new-countdown {
-    height: 90px;
-    min-width: 300px;
-    border-radius: 30px;
-    scale: 0.4;
-
-    .left-side {
-      padding: 15px;
-      .circle-icon {
-        width: 50px;
-        height: 50px;
-        border-width: 4px;
-      }
-    }
-
-    .right-side {
-      padding: 0 20px;
-
-      .days-number {
-        font-size: 56px;
-      }
-
-      .days-label {
-        .days-word, .to-go {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .new-countdown {
-    height: 70px;
-    min-width: 260px;
-    border-radius: 25px;
-    scale: 0.4;
-
-    .left-side {
-      padding: 10px;
-      .circle-icon {
-        width: 40px;
-        height: 40px;
-        border-width: 3px;
-      }
-    }
-
-    .right-side {
-      padding: 0 15px;
-
-      .days-number {
-        font-size: 40px;
-      }
-
-      .days-label {
-        .days-word, .to-go {
-          font-size: 18px;
-        }
-      }
     }
   }
 }

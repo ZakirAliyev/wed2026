@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import logo from '../../../assets/logo.png';
+import logo from '../../../assets/logo.webp';
 import { PulseLoader } from 'react-spinners';
 
 const SplashScreen = ({ isVisible }) => {

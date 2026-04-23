@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './index.scss';
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo.webp";
 import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark, HiOutlineSquares2X2 } from 'react-icons/hi2';
 import Countdown from '../Countdown';
 
@@ -34,7 +34,9 @@ function Navbar() {
                         </Link>
                     </div>
 
-                    {!isAboutPage && <Countdown />}
+                    <div className="navbar-countdown-wrapper">
+                        {!isAboutPage && <Countdown />}
+                    </div>
 
                     {/* Desktop link */}
                     <div className="about desktop-only">

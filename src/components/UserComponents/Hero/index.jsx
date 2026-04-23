@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import './index.scss';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
-import location from '../../../assets/location.png';
-import calendar from '../../../assets/calendar.png';
+import location from '../../../assets/location.webp';
+import calendar from '../../../assets/calendar.webp';
 import Countdown from '../Countdown';
 import { useMediaQuery } from "react-responsive";
-import arrow from "/src/assets/arrow.png"
+import arrow from "/src/assets/arrow.webp"
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 

@@ -20,7 +20,7 @@ function Announcement() {
                     className="announcement-inner"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                 >
                     <motion.div className="badge-row" variants={fadeUp}>
                         <span className="line"></span>
@@ -28,9 +28,8 @@ function Announcement() {
                     </motion.div>
                     <motion.h2 variants={fadeUp}>Republic of Azerbaijan to Host World Environment Day 2026</motion.h2>
                     <motion.p variants={fadeUp}>
-                        Azerbaijan is proud to announce that it will host the United Nations' World Environment Day 2026.
-                        This landmark event will bring together global leaders, scientists, activists, and citizens to
-                        address the world's most pressing environmental challenges and inspire collective action.
+                        Azerijan is accelerating its transition to renewable energy through large-scale solar and wind projects. Strategic investments aim to reduce emissions, increase energy efficiency, and support    clean energy future.
+                        The programme will combine high-level discussions with public outdoor activities, creating an inclusive national celebration of nature and climate action. The event will take place on June 5 at the Heydar Aliyev Center and will include both closed sessions and an outdoor exhibition open to the public. 
                     </motion.p>
 
                     <motion.a href="#" className="cta-btn" variants={fadeUp}>

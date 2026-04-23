@@ -137,31 +137,26 @@
     .mobile-menu {
       display: block;
     }
+
+    .navbar-countdown-wrapper {
+      display: none;
+    }
   }
 }
 
 // Small mobile (≤576px): hide countdown + hamburger, show About event directly
 @media screen and (max-width: 576px) {
   #navbar {
-    padding: 16px 12px;
+    padding: 8px 12px;
 
     nav {
       .branding img {
         height: 44px;
       }
 
-      // Hide countdown — not shown in mobile reference design
-      .new-countdown {
-        display: none;
-      }
-
       // Hide hamburger
       .hamburger {
         display: none;
-      }
-
-      .branding img {
-        height: 52px;
       }
 
       // Show About event link directly on mobile

@@ -11,7 +11,7 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 80px;
     align-items: center;
   }
@@ -101,12 +101,12 @@
 
     .text-side {
       h2 {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 20px;
       }
 
       p {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 

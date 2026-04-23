@@ -1,10 +1,18 @@
-#joinMovement {
+.join-scroll-wrapper {
+  height: 150vh; // Faster pin duration
   position: relative;
+}
+
+#joinMovement {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('../../../assets/tebiet3.png') center center / cover no-repeat;
-  min-height: 750px;
+    url('../../../assets/tebiet3.webp') center center / cover no-repeat;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   .join-overlay {
     width: 100%;
@@ -25,7 +33,7 @@
     p {
       font-size: 16px;
       opacity: 0.8;
-      margin-bottom: 36px;
+      margin-bottom: 16px;
       line-height: 1.7;
       max-width: 650px;
     }
@@ -33,12 +41,14 @@
     .join-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       background: #E0DD58;
       color: #0D0D0D;
-      padding: 14px 32px;
+      height: 36px;
+      padding: 0 24px;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -58,19 +68,20 @@
 
 @media screen and (max-width: 768px) {
   #joinMovement {
-    min-height: 300px;
-
+    height: 100vh;
     .join-overlay {
-      padding: 60px 0;
+      padding: 0;
     }
 
     .join-content {
       h2 {
         font-size: 28px;
+        margin-bottom: 16px;
       }
 
       p {
         font-size: 14px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -78,18 +89,21 @@
 
 @media screen and (max-width: 576px) {
   #joinMovement {
+    height: 100vh;
     .join-overlay {
-      padding: 48px 0;
+      padding: 0;
     }
 
     .join-content {
       h2 {
         font-size: 22px;
+        margin-bottom: 16px;
       }
 
       .join-btn {
-        padding: 12px 24px;
-        font-size: 14px;
+        height: 36px;
+        padding: 0 20px;
+        font-size: 13px;
       }
     }
   }

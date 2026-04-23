@@ -1,8 +1,8 @@
 #footer {
   position: relative;
-  background: url('../../../assets/tebiet5.png') center / cover no-repeat;
-  aspect-ratio: 16 / 9;
-  min-height: 480px;
+  background: url('../../../assets/tebiet5.webp') center bottom / cover no-repeat;
+  aspect-ratio: 20 / 10;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   color: white;
@@ -29,10 +29,10 @@
     text-align: center;
 
     .quote-text {
-      font-size: 58px;
+      font-size: 48px;
       font-weight: 600;
       line-height: 1.3;
-      margin-top: -300px;
+      margin-top: -275px;
     }
   }
 
@@ -40,7 +40,7 @@
   .footer-bottom-block {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 24px;
   }
 
   // ─── Partners row ───────────────────────────────────────
@@ -63,45 +63,18 @@
       letter-spacing: -0.2px;
     }
 
-    // Separator |
-    .sep {
-      font-size: 64px;
-      font-weight: 100;
-      color: rgba(255, 255, 255, 0.20);
-      line-height: 1;
-      padding: 0 48px;
-      align-self: center;
-    }
-
-    // Logo + text side by side (horizontal)
-    .partner-logo-item {
+    // Combined logos image
+    .partner-combined-logos {
       display: flex;
-      align-items: center;
-      gap: 24px;
+      justify-content: center;
+      width: 100%;
 
       img {
-        height: 64px;
-        max-width: 250px;
-        width: 140px;
+        max-width: 100%;
+        height: auto;
+        max-height:150px;
         object-fit: contain;
-        opacity: 0.95;
-        flex-shrink: 0;
         filter: brightness(1.1);
-        transition: opacity 0.3s ease;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-
-      span {
-        font-size: 11px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.85);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height: 1.5;
-        white-space: nowrap;
       }
     }
   }
@@ -137,19 +110,8 @@
         padding-right: 20px;
       }
 
-      .sep {
-        padding: 0 18px;
-        font-size: 26px;
-      }
-
-      .partner-logo-item {
-        img {
-          height: 40px;
-        }
-
-        span {
-          font-size: 10px;
-        }
+      .partner-combined-logos img {
+        max-height: 60px;
       }
     }
   }
@@ -171,28 +133,12 @@
     }
 
     .footer-partners {
-      .partner-text-only {
-        font-size: 15px;
-        padding-right: 0;
-        width: 100%;
-        margin-bottom: 8px;
-      }
+      flex-wrap: nowrap;
+      gap: 0;
+      justify-content: center;
 
-      .sep {
-        padding: 0 12px;
-        font-size: 22px;
-      }
-
-      .partner-logo-item {
-        gap: 8px;
-
-        img {
-          height: 34px;
-        }
-
-        span {
-          font-size: 9px;
-        }
+      .partner-combined-logos img {
+        max-height: 45px;
       }
     }
   }
@@ -212,19 +158,10 @@
     }
 
     .footer-partners {
-      .sep {
-        padding: 0 8px;
-        font-size: 18px;
-      }
-
-      .partner-logo-item {
-        img {
-          height: 28px;
-        }
-
-        span {
-          font-size: 8px;
-        }
+      flex-wrap: nowrap;
+      
+      .partner-combined-logos img {
+        max-height: 76px;
       }
     }
 

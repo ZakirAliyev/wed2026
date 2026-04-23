@@ -4,11 +4,12 @@ import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import location from '../../../assets/location.png';
 import calendar from '../../../assets/calendar.png';
 import Countdown from '../Countdown';
+import {useMediaQuery} from "react-responsive";
 
 function Hero() {
     const [activeStep, setActiveStep] = useState(0);
     const [daysLeft, setDaysLeft] = useState(0);
-
+const isMobile = useMediaQuery({maxWidth:"768px"});
     const steps = [
         { idle: 'Start', hover: 'Start' },
         { idle: '1', hover: 'Home' },
@@ -53,7 +54,9 @@ function Hero() {
                         <span>5–6 June</span>
                     </div>
 
-                   <Countdown/>
+                    {isMobile && (
+                        <Countdown/>
+                    )}
                 </div>
 
                 <div className="sidebar-right">

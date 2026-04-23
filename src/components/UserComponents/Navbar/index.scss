@@ -24,20 +24,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
     gap: 20px;
 
     .branding {
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
       img {
-        height: 60px;
+        height: 50px;
         width: auto;
       }
     }
 
     .new-countdown {
-      // The component has its own styles, we just need to ensure it doesn't break the flex layout
       flex-shrink: 0;
     }
 
@@ -52,24 +59,16 @@
         align-items: center;
         gap: 8px;
         padding: 10px 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 100px;
         color: white;
         font-size: 14px;
         font-weight: 400;
-        text-decoration: none;
         transition: all 0.3s ease;
 
+  span{
+    border-bottom: 1px solid white;
+  }
         svg {
           font-size: 18px;
-        }
-
-        &:hover {
-          background: #E0DD58;
-          border-color: #E0DD58;
-          color: #0D0D0D;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(224, 221, 88, 0.3);
         }
       }
     }

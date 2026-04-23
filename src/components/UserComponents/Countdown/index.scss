@@ -1,11 +1,11 @@
 .new-countdown {
   display: flex;
   align-items: stretch;
-  height: 120px;
+  height: 100px;
   width: fit-content;
-  min-width: 380px;
+  min-width: max-content;
   background: #BCC6D3;
-  border-radius: 40px;
+  border-radius: 20px;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
   scale: 0.5;
@@ -16,11 +16,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
 
     .circle-icon {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       background: #EFEF3D;
       border: 5px solid #FFFFFF;
       border-radius: 50%;
@@ -37,9 +37,10 @@
     align-items: center;
     padding: 0 30px;
     gap: 15px;
+    border-radius: 20px;
 
     .days-number {
-      font-size: 80px;
+      font-size: 60px;
       font-weight: 800;
       color: #FFFFFF;
       line-height: 1;
@@ -51,16 +52,17 @@
       justify-content: center;
       color: #FFFFFF;
       text-transform: lowercase;
+      width: 90px;
 
       .days-word {
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 0.9;
       }
 
       .to-go {
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 0.9;
       }
     }

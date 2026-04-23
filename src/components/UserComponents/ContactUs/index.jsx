@@ -1,33 +1,50 @@
 import './index.scss';
 import { FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa';
 
+import { motion } from 'framer-motion';
+
 function ContactUs() {
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] }
+        }
+    };
+
     return (
         <section id="contactUs">
             <div className="container">
-                <div className="contact-info">
-                    <span className="small-tag" data-aos="fade-up" data-aos-delay="100">WED 2026</span>
-                    <h2 data-aos="fade-up" data-aos-delay="200">Contact Us</h2>
-                    <p data-aos="fade-up" data-aos-delay="300">
+                <motion.div 
+                    className="contact-info"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ staggerChildren: 0.1 }}
+                >
+                    <motion.span className="small-tag" variants={fadeUp}>WED 2026</motion.span>
+                    <motion.h2 variants={fadeUp}>Contact Us</motion.h2>
+                    <motion.p variants={fadeUp}>
                         Reach out to us for inquiries, partnerships, or more information
                         about WED 2026. Our team is ready to support your ideas, guide
                         your participation, and collaborate on initiatives that
                         contribute to a more sustainable and resilient future.
-                    </p>
-                    <a href="mailto:Info@wed2026.az" className="email-link" data-aos="fade-up" data-aos-delay="400">
+                    </motion.p>
+                    <motion.a href="mailto:Info@wed2026.az" className="email-link" variants={fadeUp}>
                         Info@wed2026.az
-                    </a>
-                    <span className='nenemki' data-aos="fade-up" data-aos-delay="500">Email</span>
+                    </motion.a>
+                    <motion.span className='nenemki' variants={fadeUp}>Email</motion.span>
                     
-                    <div className="social-follow" data-aos="fade-up" data-aos-delay="600">
+                    <motion.div className="social-follow" variants={fadeUp}>
                         <span>Follow us:</span>
                         <div className="social-icons">
                             <a href="#"><FaInstagram /></a>
                             <a href="#"><FaTwitter /></a>
                             <a href="#"><FaTiktok /></a>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
 
 

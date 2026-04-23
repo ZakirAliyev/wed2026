@@ -26,25 +26,63 @@ const themes = [
     }
 ];
 
+import { motion } from 'framer-motion';
+
 function Themes() {
     const themeImages = [tebiet, tebiet2, tebiet3];
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: [0.33, 1, 0.68, 1]
+            }
+        }
+    };
+
+    const imageVariants = {
+        hidden: { scale: 0.8, opacity: 0 },
+        visible: { 
+            scale: 1, 
+            opacity: 1,
+            transition: {
+                duration: 1,
+                ease: [0.33, 1, 0.68, 1]
+            }
+        }
+    };
 
     return (
         <section id="themes">
             <div className="container">
                 {themes.map((theme, index) => (
                     <div className={`theme-item ${theme.reverse ? 'reverse' : ''}`} key={index} id={`theme-${theme.number}`}>
-                        <div className="theme-content" data-aos={theme.reverse ? "fade-left" : "fade-right"} data-aos-delay="100">
+                        <motion.div 
+                            className="theme-content"
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                        >
                             <span className="theme-number">{theme.number}</span>
                             <h2 className="theme-title">{theme.title}</h2>
                             <p className="theme-desc">{theme.description}</p>
                             <a href="#" className="theme-link">{theme.linkText}
                                 <img src={arrow} alt='Arrow'/>
                             </a>
-                        </div>
-                        <div className="theme-image" data-aos="zoom-in" data-aos-delay="200">
+                        </motion.div>
+                        <motion.div 
+                            className="theme-image"
+                            variants={imageVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                        >
                             <img src={themeImages[index]} alt={theme.title} />
-                        </div>
+                        </motion.div>
                     </div>
 
 

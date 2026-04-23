@@ -4,23 +4,37 @@ import logo2 from '../../../assets/logo2.png';
 import logo3 from '../../../assets/logo3.png';
 import logo4 from '../../../assets/logo4.png';
 
+import { motion } from 'framer-motion';
+
 function Footer() {
     return (
         <section id="footer">
             <div className="footer-content">
 
                 {/* Quote — top left */}
-                <div className="footer-text">
-                    <p className="quote-text" data-aos="fade-up" data-aos-delay="100">
+                <motion.div 
+                    className="footer-text"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
+                    viewport={{ once: true }}
+                >
+                    <p className="quote-text">
                         Inspired by nature.<br />
                         For climate. For our future.
                     </p>
-                </div>
+                </motion.div>
 
 
                 {/* Bottom block */}
                 <div className="footer-bottom-block">
-                    <div className="footer-partners" data-aos="fade-up" data-aos-delay="200">
+                    <motion.div 
+                        className="footer-partners"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
+                        viewport={{ once: true }}
+                    >
 
                         <div className="partner-logo-item">
                             <img src={logo1} alt="#ClimateAction" />
@@ -44,7 +58,7 @@ function Footer() {
                             <img src={logo4} alt="Azerbaijan Baku 2026" />
                         </div>
 
-                    </div>
+                    </motion.div>
 
                     <div className="footer-copyright">
                         <p>© 2026 Ministry of Ecology and Natural Resources of Azerbaijan</p>

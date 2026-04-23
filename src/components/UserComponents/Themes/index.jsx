@@ -34,7 +34,7 @@ function Themes() {
             <div className="container">
                 {themes.map((theme, index) => (
                     <div className={`theme-item ${theme.reverse ? 'reverse' : ''}`} key={index}>
-                        <div className="theme-content">
+                        <div className="theme-content" data-aos={theme.reverse ? "fade-left" : "fade-right"} data-aos-delay="100">
                             <span className="theme-number">{theme.number}</span>
                             <h2 className="theme-title">{theme.title}</h2>
                             <p className="theme-desc">{theme.description}</p>
@@ -42,10 +42,12 @@ function Themes() {
                                 <img src={arrow} alt='Arrow'/>
                             </a>
                         </div>
-                        <div className="theme-image">
+                        <div className="theme-image" data-aos="zoom-in" data-aos-delay="200">
                             <img src={themeImages[index]} alt={theme.title} />
                         </div>
                     </div>
+
+
                 ))}
             </div>
         </section>

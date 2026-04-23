@@ -6,7 +6,7 @@ function AboutEvent() {
         <section id="aboutEvent">
             <div className="container">
                 <div className="about-grid">
-                    <div className="text-side">
+                    <div className="text-side" data-aos="fade-right" data-aos-delay="100">
                         <h2>About the Event</h2>
                         <p>
                             World Environment Day is the United Nations' principal vehicle for
@@ -20,12 +20,16 @@ function AboutEvent() {
                             Environment Day brand to champion environmental causes.
                         </p>
                     </div>
-                    <div className="image-side">
+                    <div className="image-side" data-aos="fade-left" data-aos-delay="200">
                         <div className="circular-logo-wrap">
                             {/* Using main logo as placeholder, styled in SCSS to look like wood-carved */}
                             <img src={iamge1} alt="WED logo" />
                         </div>
                     </div>
+
+
+
+
                 </div>
             </div>
         </section>

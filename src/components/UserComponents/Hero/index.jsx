@@ -5,6 +5,7 @@ import location from '../../../assets/location.png';
 import calendar from '../../../assets/calendar.png';
 import Countdown from '../Countdown';
 import {useMediaQuery} from "react-responsive";
+import arrow from "/src/assets/arrow.png"
 
 function Hero() {
     const [activeStep, setActiveStep] = useState(0);
@@ -27,7 +28,7 @@ const isMobile = useMediaQuery({maxWidth:"768px"});
     return (
         <section id="hero">
             <div className="container">
-                <div className="sidebar-left">
+                <div className="sidebar-left" data-aos="fade-right" data-aos-delay="200">
                     <span>Follow us</span>
                     <div className="social-icons">
                         <a href="#"><FaInstagram /></a>
@@ -36,31 +37,39 @@ const isMobile = useMediaQuery({maxWidth:"768px"});
                 </div>
 
                 <div className="hero-content">
-                    <div className="tagline">
+                    <div className="tagline" data-aos="fade-up" data-aos-delay="400">
                         <span className="line"></span>
                         <p>Celebrate Nature with Us</p>
                     </div>
 
-                    <h1>World Environment Day <br />2026</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="600">World Environment Day <br />2026</h1>
 
-                    <p className="hosted">
+                    <p className="hosted" data-aos="fade-up" data-aos-delay="800">
+                        scroll down
+                        <img src={arrow} alt={"bottom"} className={"arrow"}/>
                         Hosted by the Ministry of <span>Ecology and Natural Resources of Azerbaijan</span>
                     </p>
 
-                    <div className="location-pill">
+                    <div className="location-pill" data-aos="fade-up" data-aos-delay="1000">
                         <img src={location} alt="Location" className="icon" />
                         <span>Baku, Heydar Aliyev Center</span>
                         <img src={calendar} alt="Calendar" className="icon" />
                         <span>5–6 June</span>
                     </div>
 
-                    {isMobile && (
-                        <Countdown/>
-                    )}
+                </div>
+
+                <div className="countdown-wrapper">
+                    <Countdown/>
                 </div>
 
                 <div className="sidebar-right">
+
+
+
+
                     <div className="step-tracker">
+
                         <div className="steps-text">
                             {steps.map((step, index) => (
                                 <div

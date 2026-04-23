@@ -13,8 +13,9 @@
 
 html {
   scroll-behavior: smooth;
-  background: #121900;
+  background: #141A02;
 }
+
 
 body {
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -62,3 +63,15 @@ a,
 @media screen and (max-width: 576px) {
   @include generate-cols('col-xs-');
 }
+
+.main-content {
+  &.loading {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.loaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease;
+  }
+}

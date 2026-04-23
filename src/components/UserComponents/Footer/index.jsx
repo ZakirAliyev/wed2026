@@ -11,15 +11,16 @@ function Footer() {
 
                 {/* Quote — top left */}
                 <div className="footer-text">
-                    <p className="quote-text">
+                    <p className="quote-text" data-aos="fade-up" data-aos-delay="100">
                         Inspired by nature.<br />
                         For climate. For our future.
                     </p>
                 </div>
 
+
                 {/* Bottom block */}
                 <div className="footer-bottom-block">
-                    <div className="footer-partners">
+                    <div className="footer-partners" data-aos="fade-up" data-aos-delay="200">
 
                         <div className="partner-logo-item">
                             <img src={logo1} alt="#ClimateAction" />
@@ -49,6 +50,8 @@ function Footer() {
                         <p>© 2026 Ministry of Ecology and Natural Resources of Azerbaijan</p>
                     </div>
                 </div>
+
+
 
             </div>
         </section>

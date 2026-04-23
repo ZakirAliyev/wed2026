@@ -20,6 +20,8 @@ function HomePage() {
                 <Footer />
             </main>
         </div>
+
+
     );
 }
 

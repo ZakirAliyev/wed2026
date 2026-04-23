@@ -1,7 +1,7 @@
 #hero {
   position: relative;
   width: 100%;
-  flex: 1;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,16 +9,33 @@
   overflow: hidden;
   padding: 12px 16px;
 
+  .arrow {
+    rotate: 90deg;
+    width: 14px;
+    margin: 0 12px;
+  }
+
   .container {
     position: relative;
     width: 100%;
     max-width: 1400px;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     padding: 0 16px;
+
+    .countdown-wrapper {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      justify-content: center;
+      z-index: 20;
+    }
+
   }
 
   // ─── Sidebar Left ────────────────────────────────────
@@ -155,11 +172,13 @@
 
   // ─── Hero Content ────────────────────────────────────
   .hero-content {
+    position: relative;
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 0;
+    z-index: 10;
+
 
     .tagline {
       display: flex;
@@ -168,13 +187,13 @@
       margin-bottom: 16px;
 
       .line {
-        width: 30px;
+        width: 60px;
         height: 2px;
         background: #E0DD58;
       }
 
       p {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 600;
         color: #E0DD58;
         letter-spacing: 0.5px;
@@ -185,7 +204,7 @@
       font-size: 56px;
       font-weight: 600;
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
 
     .hosted {
@@ -194,7 +213,6 @@
       font-weight: 400;
       margin-bottom: 20px;
       line-height: 1.6;
-      max-width: 420px;
 
       span {
         text-decoration: underline;
@@ -223,6 +241,8 @@
         opacity: 0.9;
       }
     }
+
+
 
     // Days badge — hidden on desktop, shown on mobile
     .days-badge {
@@ -259,15 +279,23 @@
 // ─── Tablet ──────────────────────────────────────────────
 @media screen and (max-width: 992px) {
   #hero {
+    min-height: 100vh;
     padding: 0 40px;
 
     .sidebar-left {
       display: none;
     }
 
+    .sidebar-right {
+      display: none;
+    }
+
     .hero-content {
       align-items: flex-start;
-      text-align: left;
+
+      .countdown-wrapper {
+        display: none;
+      }
 
       h1 {
         font-size: 42px;
@@ -279,31 +307,31 @@
 // ─── Mobile ──────────────────────────────────────────────
 @media screen and (max-width: 576px) {
   #hero {
+    min-height: 100vh;
     padding: 0 0;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 0;
 
     .container {
-      align-items: flex-end;
+      align-items: center;
       padding: 0;
+
+      .countdown-wrapper {
+        display: flex;
+      }
     }
 
     .sidebar-left {
       display: none;
     }
 
-    // Sidebar right — visible on mobile, stacked right
     .sidebar-right {
-      right: 0;
-      top: 40%;
-      transform: translateY(-50%);
+      display: none;
     }
 
     .hero-content {
       width: 100%;
-      align-items: flex-start;
-      text-align: left;
-      padding: 0 20px 40px;
+      padding: 0 20px;
       position: relative;
       z-index: 5;
 
@@ -320,7 +348,6 @@
 
       .hosted {
         font-size: 13px;
-        max-width: 280px;
         margin-bottom: 16px;
       }
 
@@ -335,6 +362,8 @@
         }
       }
 
+
+
       // Show days badge on mobile
       .days-badge {
         display: flex;
@@ -346,7 +375,10 @@
 // ─── Very small ─────────────────────────────────────────
 @media screen and (max-width: 380px) {
   #hero {
+    min-height: 100vh;
     .hero-content {
+
+
       h1 {
         font-size: 30px;
       }

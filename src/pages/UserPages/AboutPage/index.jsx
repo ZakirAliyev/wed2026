@@ -18,6 +18,8 @@ function AboutPage() {
                 <Footer />
             </main>
         </div>
+
+
     );
 }
 

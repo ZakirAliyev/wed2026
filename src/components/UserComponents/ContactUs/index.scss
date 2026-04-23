@@ -1,0 +1,147 @@
+#contactUs {
+  background: #121900;
+  padding: 100px 0;
+  color: white;
+
+  .container {
+    max-width: 1400px;
+    padding: 0 72px;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    .small-tag {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.8;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+
+    .email-link {
+      font-size: 24px;
+      font-weight: 600;
+      color: #8DAD45; // Yellow-green color from home page
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .nenemki {
+      margin-bottom: 40px;
+    }
+
+    .social-follow {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 12px;
+
+        a {
+          width: 36px;
+          height: 36px;
+          background: #8DAD45;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          transition: transform 0.3s ease, background 0.3s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+            background: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ─── Responsive ──────────────────────────────────────────
+@media screen and (max-width: 992px) {
+  #contactUs {
+    padding: 80px 0;
+
+    .container {
+      padding: 0 40px;
+    }
+
+    .contact-info {
+      max-width: 100%;
+      text-align: center;
+      align-items: center;
+
+      h2 {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #contactUs {
+    padding: 60px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+
+    .contact-info {
+      h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+
+      .email-link {
+        font-size: 20px;
+        margin-bottom: 32px;
+      }
+
+      .social-follow {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+}

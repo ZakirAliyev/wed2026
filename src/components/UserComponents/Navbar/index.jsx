@@ -1,28 +1,33 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './index.scss';
 import logo from "../../../assets/logo.png";
-import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark } from 'react-icons/hi2';
+import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark, HiOutlineSquares2X2 } from 'react-icons/hi2';
 import Countdown from '../Countdown';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    const isAboutPage = location.pathname === '/about';
 
     return (
         <section id="navbar">
             <div className="container">
                 <nav>
                     <div className="branding">
-                        <img src={logo} alt="Logo" />
+                        <Link to="/">
+                            <img src={logo} alt="Logo" />
+                        </Link>
                     </div>
 
-                    <Countdown />
+                    {!isAboutPage && <Countdown />}
 
-                    {/* Desktop about link */}
+                    {/* Desktop link */}
                     <div className="about desktop-only">
-                        <a href="#">
-                            <span>About event</span>
-                            <HiOutlineArrowUpRight />
-                        </a>
+                        <Link to={isAboutPage ? "/" : "/about"}>
+                            <span>{isAboutPage ? "Home page" : "About event"}</span>
+                            {isAboutPage ? <HiOutlineSquares2X2 /> : <HiOutlineArrowUpRight />}
+                        </Link>
                     </div>
 
                     {/* Mobile hamburger */}
@@ -38,10 +43,10 @@ function Navbar() {
                 {/* Mobile dropdown menu */}
                 {menuOpen && (
                     <div className="mobile-menu">
-                        <a href="#" onClick={() => setMenuOpen(false)}>
-                            <span>About event</span>
-                            <HiOutlineArrowUpRight />
-                        </a>
+                        <Link to={isAboutPage ? "/" : "/about"} onClick={() => setMenuOpen(false)}>
+                            <span>{isAboutPage ? "Home page" : "About event"}</span>
+                            {isAboutPage ? <HiOutlineSquares2X2 /> : <HiOutlineArrowUpRight />}
+                        </Link>
                     </div>
                 )}
             </div>

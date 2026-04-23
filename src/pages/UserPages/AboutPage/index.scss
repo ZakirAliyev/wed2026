@@ -1,0 +1,25 @@
+#aboutPage {
+  width: 100%;
+
+  #aboutHeroSection {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutMainContent {
+    width: 100%;
+  }
+}
+
+// ─── Responsive ──────────────────────────────────────────
+@media screen and (max-width: 576px) {
+  #aboutPage {
+    #aboutHeroSection {
+      height: auto;
+      min-height: 60vh;
+    }
+  }
+}

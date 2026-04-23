@@ -72,6 +72,110 @@
       }
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        span {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      .lang-trigger-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .lang-icon-btn {
+          background: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .lang-dropdown {
+          position: absolute;
+          top: calc(100% + 15px);
+          right: -5px;
+          background: rgba(10, 15, 10, 0.85);
+          backdrop-filter: blur(25px) saturate(180%);
+          -webkit-backdrop-filter: blur(25px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          padding: 6px;
+          min-width: 140px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+                      inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+          z-index: 1001;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          transform-origin: top right;
+          animation: modernSlideIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+          button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px 16px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: right;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+              color: white;
+              background: rgba(255, 255, 255, 0.05);
+            }
+
+            &.active {
+              color: #E0DD58;
+              background: rgba(224, 221, 88, 0.08);
+            }
+          }
+        }
+      }
+    }
+
     // Hamburger – hidden on desktop
     .hamburger {
       display: none;
@@ -88,6 +192,19 @@
       &:hover {
         background: rgba(255, 255, 255, 0.1);
       }
+    }
+  }
+
+  @keyframes modernSlideIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(-10px) scale(0.9) rotateX(-10deg);
+      filter: blur(5px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0) scale(1) rotateX(0);
+      filter: blur(0);
     }
   }
 

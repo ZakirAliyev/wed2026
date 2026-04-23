@@ -1,9 +1,10 @@
 import './index.scss';
 import footerLogos from '../../../assets/logolar.png';
-
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 function Footer() {
+    const { t } = useTranslation();
     return (
         <section id="footer">
             <div className="footer-content">
@@ -17,8 +18,8 @@ function Footer() {
                     viewport={{ once: true }}
                 >
                     <p className="quote-text">
-                        Inspired by nature.<br />
-                        For climate. For our future.
+                        {t('footer.quoteLine1')}<br />
+                        {t('footer.quoteLine2')}
                     </p>
                 </motion.div>
 
@@ -38,7 +39,7 @@ function Footer() {
                     </motion.div>
 
                     <div className="footer-copyright">
-                        <p>© 2026 Ministry of Ecology and Natural Resources of Azerbaijan</p>
+                        <p>{t('footer.copyright')}</p>
                     </div>
                 </div>
 
@@ -49,4 +50,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export default Footer;

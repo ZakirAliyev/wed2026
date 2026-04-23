@@ -34,10 +34,9 @@
     position: relative;
     z-index: 10;
     h1 {
-
+      max-width: 900px;
       font-size: 48px;
       font-weight: 600;
-      max-width: 1400px;
     }
   }
 }

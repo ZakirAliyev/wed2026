@@ -1,4 +1,62 @@
 {
-  "welcome": "Welcome",
-  "login": "Login"
+    "navbar": {
+        "aboutEvent": "About event",
+        "home": "Home page"
+    },
+    "hero": {
+        "followUs": "Follow us",
+        "tagline": "Celebrate Nature with Us",
+        "title": "World Environment Day 2026",
+        "scrollDown": "scroll down",
+        "hostedBy": "Hosted by the Ministry of",
+        "ministryName": "Ecology and Natural Resources of Azerbaijan",
+        "location": "Baku, Heydar Aliyev Center",
+        "date": "5–6 June",
+        "steps": {
+            "start": "Start",
+            "forest": "Forest",
+            "urban": "Urban",
+            "energy": "Energy"
+        }
+    },
+    "announcement": {
+        "badge": "About WED 2026",
+        "title": "Republic of Azerbaijan to Host World Environment Day 2026",
+        "description": "Azerijan is accelerating its transition to renewable energy through large-scale solar and wind projects. Strategic investments aim to reduce emissions, increase energy efficiency, and support clean energy future. The programme will combine high-level discussions with public outdoor activities, creating an inclusive national celebration of nature and climate action. The event will take place on June 5 at the Heydar Aliyev Center and will include both closed sessions and an outdoor exhibition open to the public.",
+        "readMore": "Read more"
+    },
+    "aboutHero": {
+        "title": "World Environment Day 2026: A Global Call for Climate Action"
+    },
+    "aboutEvent": {
+        "title": "About the Event",
+        "description1": "World Environment Day is the United Nations’ leading global platform for environmental action, observed annually since 1973. Led by UNEP, it brings together governments, businesses, and communities across more than 150 countries to promote sustainability and environmental responsibility.",
+        "description2": "The 2026 celebration, hosted by Azerbaijan in Baku, focuses on climate action, emphasizing the urgent need to respond to the signals of a changing Earth and strengthen the connection between climate action and nature. Under the global call on: “Inspired by Nature. For Climate. For our Future”, event will invite the international community to advance cooperation, share solutions, and accelerate progress towards a climate-resilient future by harnessing the power of nature.",
+        "description3": "The event will take place on June 5 at the Heydar Aliyev Center and will include both closed sessions and an outdoor exhibition open to the public."
+    },
+    "themes": {
+        "watchStory": "Watch Climate Story",
+        "theme1": {
+            "title": "Biodiversity conservation and ecosystem restoration",
+            "description": "Azerbaijan is expanding nature protected areas, restoring degraded forests and lands, ecosystems from the Caspian Sea coastline to inland landscapes through afforestation, biodiversity conservation and sustainable environmental management practices to strengthen climate resilience, positioning nature as a key solution to climate change."
+        },
+        "theme2": {
+            "title": "Climate action",
+            "description": "Azerbaijan aims to balance socio-economic priorities with environmental sustainability, ensuring that climate action efforts across the economy align with the country’s commitments under NDC 3.0 within the framework of the Paris Agreement, while reinforcing its national policy framework to support sustainable development."
+        },
+        "theme3": {
+            "title": "Renewable Energy",
+            "description": "Azeribaijan is accelerating its transition to renewable energy through large-scale solar and wind projects. Strategic investments aim to reduce emissions, increase energy efficiency, and support clean energy future."
+        }
+    },
+    "joinMovement": {
+        "title": "Join the Movement for Nature",
+        "description": "Join us in shaping World Environment Day 2026 by becoming a partner. Collaborate, contribute, and be part of a global effort to drive climate action and environmental impact.",
+        "register": "Register Now"
+    },
+    "footer": {
+        "quoteLine1": "Inspired by nature.",
+        "quoteLine2": "For climate. For our future.",
+        "copyright": "© 2026 Ministry of Ecology and Natural Resources of Azerbaijan"
+    }
 }

@@ -2,8 +2,10 @@ import { useRef } from 'react';
 import './index.scss';
 import { HiOutlineArrowUpRight } from 'react-icons/hi2';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function JoinMovement() {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -26,16 +28,16 @@ function JoinMovement() {
                             style={{ opacity }}
                         >
                             <motion.h2 style={{ y: yTitle }}>
-                                Join the Movement for Nature
+                                {t('joinMovement.title')}
                             </motion.h2>
 
                             <motion.p style={{ y: yPara }}>
-                                Join us in shaping World Environment Day 2026 by becoming a partner. Collaborate, contribute, and be part of a global effort to drive climate action and environmental impact.
+                                {t('joinMovement.description')}
                             </motion.p>
 
                             <motion.div style={{ y: yBtn }}>
                                 <a href="#" className="join-btn">
-                                    <span>Register Now</span>
+                                    <span>{t('joinMovement.register')}</span>
                                     <HiOutlineArrowUpRight />
                                 </a>
                             </motion.div>

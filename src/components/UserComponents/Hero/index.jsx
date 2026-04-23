@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import './index.scss';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
-import location from '../../../assets/location.webp';
-import calendar from '../../../assets/calendar.webp';
+import locationIcon from '../../../assets/location.webp';
+import calendarIcon from '../../../assets/calendar.webp';
 import Countdown from '../Countdown';
 import { useMediaQuery } from "react-responsive";
 import arrow from "/src/assets/arrow.webp"
+import { useTranslation } from 'react-i18next';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -14,18 +15,18 @@ import patternBg from '../../../assets/pattern.png';
 import daglarBg from '../../../assets/daglar.webp';
 
 function Hero() {
+    const { t } = useTranslation();
     const { scrollY } = useScroll();
     const yBg = useTransform(scrollY, [0, 500], [0, 200]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
     const [activeStep, setActiveStep] = useState(0);
-    const [daysLeft, setDaysLeft] = useState(0);
     const isMobile = useMediaQuery({ maxWidth: "768px" });
+
     const steps = [
-        { idle: 'Start', hover: 'Start' },
-        { idle: '1', hover: 'Forest' },
-        { idle: '2', hover: 'Urban' },
-        { idle: '3', hover: 'Energy' }
+        { idle: t('hero.steps.start'), hover: t('hero.steps.start') },
+        { idle: '1', hover: t('hero.steps.forest') },
+        { idle: '2', hover: t('hero.steps.urban') },
+        { idle: '3', hover: t('hero.steps.energy') }
     ];
 
     const handleStepClick = (index) => {
@@ -36,13 +37,6 @@ function Hero() {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
-
-    useEffect(() => {
-        const targetDate = new Date('June 5, 2026 00:00:00').getTime();
-        const now = new Date().getTime();
-        const days = Math.ceil((targetDate - now) / (1000 * 60 * 60 * 24));
-        setDaysLeft(Math.max(0, days));
-    }, []);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -62,7 +56,7 @@ function Hero() {
             opacity: 1,
             transition: {
                 duration: 0.8,
-                ease: [0.33, 1, 0.68, 1] // Custom cubic-bezier for premium feel
+                ease: [0.33, 1, 0.68, 1]
             }
         }
     };
@@ -97,7 +91,7 @@ function Hero() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                 >
-                    <span>Follow us</span>
+                    <span>{t('hero.followUs')}</span>
                     <div className="social-icons">
                         <a href="#"><FaInstagram /></a>
                         <a href="#"><FaFacebookF /></a>
@@ -112,24 +106,24 @@ function Hero() {
                 >
                     <motion.div className="tagline" variants={itemVariants}>
                         <span className="line"></span>
-                        <p>Celebrate Nature with Us</p>
+                        <p>{t('hero.tagline')}</p>
                     </motion.div>
 
                     <motion.h1 variants={itemVariants}>
-                        World Environment Day <br />2026
+                        {t('hero.title')}
                     </motion.h1>
 
                     <motion.p className="hosted" variants={itemVariants}>
-                        scroll down
+                        {t('hero.scrollDown')}
                         <img src={arrow} alt={"bottom"} className={"arrow"} />
-                        Hosted by the Ministry of <span>Ecology and Natural Resources of Azerbaijan</span>
+                        {t('hero.hostedBy')} <span>{t('hero.ministryName')}</span>
                     </motion.p>
 
                     <motion.div className="location-pill" variants={itemVariants}>
-                        <img src={location} alt="Location" className="icon" />
-                        <span>Baku, Heydar Aliyev Center</span>
-                        <img src={calendar} alt="Calendar" className="icon" />
-                        <span>5–6 June</span>
+                        <img src={locationIcon} alt="Location" className="icon" />
+                        <span>{t('hero.location')}</span>
+                        <img src={calendarIcon} alt="Calendar" className="icon" />
+                        <span>{t('hero.date')}</span>
                     </motion.div>
 
                 </motion.div>
@@ -139,12 +133,7 @@ function Hero() {
                 </div>
 
                 <div className="sidebar-right">
-
-
-
-
                     <div className="step-tracker">
-
                         <div className="steps-text">
                             {steps.map((step, index) => (
                                 <div

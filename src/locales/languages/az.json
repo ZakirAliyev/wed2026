@@ -1,4 +1,62 @@
 {
-  "welcome": "Xoş gəlmisiz",
-  "login": "Daxil ol"
+    "navbar": {
+        "aboutEvent": "Tədbir haqqında",
+        "home": "Ana səhifə"
+    },
+    "hero": {
+        "followUs": "Bizi izləyin",
+        "tagline": "Təbiəti bizimlə qeyd edin",
+        "title": "Ümumdünya Ətraf Mühit Günü 2026",
+        "scrollDown": "aşağı çəkin",
+        "hostedBy": "Ev sahibi:",
+        "ministryName": "Azərbaycan Respublikası Ekologiya və Təbii Sərvətlər Nazirliyi",
+        "location": "Bakı, Heydar Əliyev Mərkəzi",
+        "date": "5–6 İyun",
+        "steps": {
+            "start": "Başla",
+            "forest": "Meşə",
+            "urban": "Şəhər",
+            "energy": "Enerji"
+        }
+    },
+    "announcement": {
+        "badge": "WED 2026 Haqqında",
+        "title": "Azərbaycan Respublikası Ümumdünya Ətraf Mühit Günü 2026-ya ev sahibliyi edir",
+        "description": "Azərbaycan iri miqyaslı günəş və külək layihələri vasitəsilə bərpa olunan enerjiyə keçidi sürətləndirir. Strateji investisiyalar emissiyaların azaldılmasına, enerji səmərəliliyinin artırılmasına və təmiz enerji gələcəyinin dəstəklənməsinə yönəlib. Proqram yüksək səviyyəli müzakirələri ictimai açıq hava fəaliyyətləri ilə birləşdirərək təbiətin və iqlim fəaliyyətinin inklüziv milli bayramını yaradacaq. Tədbir 5 iyunda Heydər Əliyev Mərkəzində baş tutacaq və həm qapalı sessiyaları, həm də geniş ictimaiyyət üçün açıq sərgini əhatə edəcek.",
+        "readMore": "Daha çox"
+    },
+    "aboutHero": {
+        "title": "Ümumdünya Ətraf Mühit Günü 2026: İqlim Fəaliyyətinə Qlobal Çağırış"
+    },
+    "aboutEvent": {
+        "title": "Tədbir Haqqında",
+        "description1": "Ümumdünya Ətraf Mühit Günü 1973-cü ildən bəri hər il qeyd olunan ətraf mühit fəaliyyəti üçün Birləşmiş Millətlər Təşkilatının aparıcı qlobal platformasıdır. UNEP-in rəhbərliyi ilə o, davamlılığı və ekoloji məsuliyyəti təşviq etmək üçün 150-dən çox ölkədə hökumətləri, biznesləri və icmaları bir araya gətirir.",
+        "description2": "Azərbaycanın ev sahibliyi ilə Bakıda keçirilən 2026-cı il bayramı iqlim fəaliyyətinə fokuslanır, dəyişən Yerin siqnallarına cavab verməyin təcili ehtiyacını və iqlim fəaliyyəti ilə təbiət arasındakı əlaqəni gücləndirməyi vurğulayır. “Təbiətdən ilhamlanaraq. İqlim üçün. Gələcəyimiz üçün” qlobal çağırışı altında tədbir beynəlxalq birliyi əməkdaşlığı inkişaf etdirməyə, həll yollarını bölüşməyə və təbiətin gücündən istifadə edərək iqlimə davamlı gələcəyə doğru tərəqqini sürətləndirməyə dəvət edəcək.",
+        "description3": "Tədbir 5 iyunda Heydər Əliyev Mərkəzində baş tutacaq və həm qapalı sessiyaları, həm də geniş ictimaiyyət üçün açıq olan açıq hava sərgisini əhatə edəcək."
+    },
+    "themes": {
+        "watchStory": "İqlim Hekayəsini İzlə",
+        "theme1": {
+            "title": "Biomüxtəlifliyin qorunması və ekosistemin bərpası",
+            "description": "Azərbaycan təbiəti iqlim dəyişikliyinin əsas həlli kimi mövqeləndirərək, iqlimə davamlılığı gücləndirmək üçün meşə salma, biomüxtəlifliyin qorunması və davamlı ətraf mühit idarəetmə təcrübələri vasitəsilə təbiəti mühafizə olunan əraziləri genişləndirir, deqradasiyaya uğramış meşə və torpaqları, Xəzər dənizi sahilindən daxili landşaftlara qədər ekosistemləri bərpa edir."
+        },
+        "theme2": {
+            "title": "İqlim fəaliyyəti",
+            "description": "Azərbaycan iqtisadiyyat üzrə iqlim fəaliyyəti səylərinin Paris Sazişi çərçivəsində ölkənin NDC 3.0 üzrə öhdəliklərinə uyğun olmasını təmin edərək, davamlı inkişafı dəstəkləmək üçün milli siyasət çərçivəsini gücləndirir və sosial-iqtisadi prioritetləri ekoloji davamlılıqla tarazlaşdırmağı hədəfləyir."
+        },
+        "theme3": {
+            "title": "Bərpa olunan enerji",
+            "description": "Azərbaycan iri miqyaslı günəş və külək layihələri vasitəsilə bərpa olunan enerjiyə keçidi sürətləndirir. Strateji investisiyalar emissiyaların azaldılmasına, enerji səmərəliliyinin artırılmasına və təmiz enerji gələcəyini dəstəkləməyə yönəlib."
+        }
+    },
+    "joinMovement": {
+        "title": "Təbiət hərəkatına qoşulun",
+        "description": "Tərəfdaş olmaqla Ümumdünya Ətraf Mühit Günü 2026-nın formalaşmasında bizə qoşulun. Əməkdaşlıq edin, töhfə verin və iqlim fəaliyyətini və ekoloji təsirini idarə etmək üçün qlobal səyin bir hissəsi olun.",
+        "register": "İndi Qeydiyyatdan Keç"
+    },
+    "footer": {
+        "quoteLine1": "Təbiətdən ilhamlanaraq.",
+        "quoteLine2": "İqlim üçün. Gələcəyimiz üçün.",
+        "copyright": "© 2026 Azərbaycan Respublikası Ekologiya və Təbii Sərvətlər Nazirliyi"
+    }
 }

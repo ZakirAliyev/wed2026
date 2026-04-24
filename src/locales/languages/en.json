@@ -14,15 +14,15 @@
         "date": "5–6 June",
         "steps": {
             "start": "Start",
-            "forest": "Forest",
-            "urban": "Urban",
-            "energy": "Energy"
+            "progress": "Climate progress",
+            "whatis": "What is WED?",
+            "join": "Join us"
         }
     },
     "announcement": {
-        "badge": "About WED 2026",
+        "badge": "About World Environment Day 2026",
         "title": "Republic of Azerbaijan to Host World Environment Day 2026",
-        "description": "Azerijan is accelerating its transition to renewable energy through large-scale solar and wind projects. Strategic investments aim to reduce emissions, increase energy efficiency, and support clean energy future. The programme will combine high-level discussions with public outdoor activities, creating an inclusive national celebration of nature and climate action. The event will take place on June 5 at the Heydar Aliyev Center and will include both closed sessions and an outdoor exhibition open to the public.",
+        "description": "World Environment Day 2026 will be hosted in Baku at the Heydar Aliyev Center, in collaboration with the United Nations Environment Programme (UNEP). The event will bring together international climate leaders, government officials, partners, and environmental champions.\nThe programme will combine high-level discussions with public outdoor activities, creating an inclusive national celebration of nature and climate action. The event will take place on June 5 at the Heydar Aliyev Center and will include both closed sessions and an outdoor exhibition open to the public.",
         "readMore": "Read more"
     },
     "aboutHero": {
@@ -52,7 +52,18 @@
     "joinMovement": {
         "title": "Join the Movement for Nature",
         "description": "Join us in shaping World Environment Day 2026 by becoming a partner. Collaborate, contribute, and be part of a global effort to drive climate action and environmental impact.",
-        "register": "Register Now"
+        "register": "Submit your request"
+    },
+    "contactUs": {
+        "tag": "World Environment Day 2026",
+        "title": "Contact Us",
+        "description": "Reach out to us for inquiries, partnerships, or more information about WED 2026. Our team is ready to support your ideas, guide your participation, and collaborate on initiatives that contribute to a more sustainable and resilient future.",
+        "emailLabel": "Email",
+        "followUs": "Follow us:"
+    },
+    "countdown": {
+        "days": "days",
+        "toGo": "to go!"
     },
     "footer": {
         "quoteLine1": "Inspired by nature.",

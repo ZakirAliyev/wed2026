@@ -1,14 +1,26 @@
 #aboutHero {
   width: 100%;
   padding-top: 100px;
-  min-height: 75vh;
+  min-height: 60vh;
   display: flex;
   align-items: end;
   justify-content: start;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../../assets/tebiet10.webp') center/cover no-repeat;
   color: white;
   padding-bottom: 75px;
   position: relative;
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../assets/tebiet10.webp') center/cover no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+  }
 
   &::after {
     content: '';
@@ -17,17 +29,17 @@
     left: 0;
     width: 100%;
     height: 300px;
-    background: linear-gradient(to bottom, transparent, #141A02);
     pointer-events: none;
-
     z-index: 2;
   }
 
 
   .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
   .content {
@@ -35,7 +47,7 @@
     z-index: 10;
     h1 {
       max-width: 900px;
-      font-size: 48px;
+      font-size: 44px;
       font-weight: 600;
     }
   }

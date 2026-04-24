@@ -14,15 +14,15 @@
         "date": "5–6 İyun",
         "steps": {
             "start": "Başla",
-            "forest": "Meşə",
-            "urban": "Şəhər",
-            "energy": "Enerji"
+            "progress": "İqlim fəaliyyəti",
+            "whatis": "ÜƏMG nədir?",
+            "join": "Bizə qoşulun"
         }
     },
     "announcement": {
-        "badge": "WED 2026 Haqqında",
+        "badge": "Ümumdünya Ətraf Mühit Günü 2026 Haqqında",
         "title": "Azərbaycan Respublikası Ümumdünya Ətraf Mühit Günü 2026-ya ev sahibliyi edir",
-        "description": "Azərbaycan iri miqyaslı günəş və külək layihələri vasitəsilə bərpa olunan enerjiyə keçidi sürətləndirir. Strateji investisiyalar emissiyaların azaldılmasına, enerji səmərəliliyinin artırılmasına və təmiz enerji gələcəyinin dəstəklənməsinə yönəlib. Proqram yüksək səviyyəli müzakirələri ictimai açıq hava fəaliyyətləri ilə birləşdirərək təbiətin və iqlim fəaliyyətinin inklüziv milli bayramını yaradacaq. Tədbir 5 iyunda Heydər Əliyev Mərkəzində baş tutacaq və həm qapalı sessiyaları, həm də geniş ictimaiyyət üçün açıq sərgini əhatə edəcek.",
+        "description": "Ümumdünya Ətraf Mühit Günü 2026, Birləşmiş Millətlər Təşkilatının Ətraf Mühit Proqramı (UNEP) ilə əməkdaşlıq çərçivəsində Bakıda, Heydər Əliyev Mərkəzində keçiriləcəksədir. Tədbir beynəlxalq iqlim liderlərini, hökumət rəsmilərini, tərəfdaşları və ekologiya sahəsində aparıcı simaları bir araya gətirəcək.\nProqram yüksək səviyyəli müzakirələri ictimai açıq hava fəaliyyətləri ilə birləşdirərək təbiətin və iqlim fəaliyyətinin inklüziv milli bayramını yaradacaq. Tədbir 5 iyunda Heydər Əliyev Mərkəzində baş tutacaq və həm qapalı sessiyaları, həm də geniş ictimaiyyət üçün açıq olan açıq hava sərgisini əhatə edəcək.",
         "readMore": "Daha çox"
     },
     "aboutHero": {
@@ -52,7 +52,18 @@
     "joinMovement": {
         "title": "Təbiət hərəkatına qoşulun",
         "description": "Tərəfdaş olmaqla Ümumdünya Ətraf Mühit Günü 2026-nın formalaşmasında bizə qoşulun. Əməkdaşlıq edin, töhfə verin və iqlim fəaliyyətini və ekoloji təsirini idarə etmək üçün qlobal səyin bir hissəsi olun.",
-        "register": "İndi Qeydiyyatdan Keç"
+        "register": "Müraciətinizi göndərin"
+    },
+    "contactUs": {
+        "tag": "Ümumdünya Ətraf Mühit Günü 2026",
+        "title": "Bizimlə əlaqə",
+        "description": "Sorğular, tərəfdaşlıqlar və ya WED 2026 haqqında daha çox məlumat üçün bizimlə əlaqə saxlayın. Komandamız ideyalarınızı dəstəkləməyə, iştirakınızı yönləndirməyə və daha davamlı və iqlimə davamlı gələcəyə töhfə verən təşəbbüslərdə əməkdaşlıq etməyə hazırdır.",
+        "emailLabel": "E-poçt",
+        "followUs": "Bizi izləyin:"
+    },
+    "countdown": {
+        "days": "gün",
+        "toGo": "qaldı!"
     },
     "footer": {
         "quoteLine1": "Təbiətdən ilhamlanaraq.",

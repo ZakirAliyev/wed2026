@@ -1,19 +1,35 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import './index.scss';
 import logo from "../../../assets/logo.webp";
+import logoFav from "../../../assets/logoFav.png";
 import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark, HiOutlineSquares2X2, HiOutlineGlobeAlt, HiChevronDown } from 'react-icons/hi2';
 import Countdown from '../Countdown';
 import { useTranslation } from 'react-i18next';
 
 function Navbar() {
     const { t, i18n } = useTranslation();
+    const isMobile = useMediaQuery({ maxWidth: "768px" });
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
     const [langOpen, setLangOpen] = useState(false);
     const location = useLocation();
     const langRef = useRef(null);
     const isAboutPage = location.pathname === '/about';
+
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious();
+        if (latest > previous && latest > 150) {
+            setHidden(true);
+        } else {
+            setHidden(false);
+        }
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -42,12 +58,21 @@ function Navbar() {
     const currentLang = i18n.language.split('-')[0];
 
     return (
-        <section id="navbar" className={scrolled ? 'scrolled' : ''}>
+        <motion.section 
+            id="navbar" 
+            className={scrolled ? 'scrolled' : ''}
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" }
+            }}
+            animate={hidden && !menuOpen ? "hidden" : "visible"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+        >
             <div className="container">
                 <nav>
                     <div className="branding">
                         <Link to="/">
-                            <img src={logo} alt="Logo" />
+                            <img src={isMobile ? logoFav : logo} alt="Logo" />
                         </Link>
                     </div>
 
@@ -103,7 +128,7 @@ function Navbar() {
                     </div>
                 )}
             </div>
-        </section>
+        </motion.section>
     );
 }
 

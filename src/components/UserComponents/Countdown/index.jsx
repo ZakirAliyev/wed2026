@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import Lottie from 'lottie-react';
+import { useTranslation } from 'react-i18next';
 import originalAnimationData from '../../../assets/daysToGo.json';
 import './index.scss';
 
 function Countdown() {
+    const { t } = useTranslation();
     const [timeLeft, setTimeLeft] = useState({
         days: '0'
     });
@@ -58,8 +60,8 @@ function Countdown() {
                 <div className="countdown-overlay-content">
                     <span className="overlay-number">{timeLeft.days}</span>
                     <div className="overlay-label">
-                        <span>days</span>
-                        <span>to go!</span>
+                        <span>{t('countdown.days')}</span>
+                        <span>{t('countdown.toGo')}</span>
                     </div>
                 </div>
             </div>

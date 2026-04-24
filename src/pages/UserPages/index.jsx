@@ -8,9 +8,8 @@ function MainPage() {
     const location = useLocation();
 
     useLayoutEffect(() => {
-        // Show splash screen and scroll to top on route change immediately before paint
+        // Show splash screen on route change
         setIsSplashVisible(true);
-        window.scrollTo(0, 0);
     }, [location.pathname]);
 
 

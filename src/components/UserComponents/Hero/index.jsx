@@ -24,14 +24,15 @@ function Hero() {
 
     const steps = [
         { idle: t('hero.steps.start'), hover: t('hero.steps.start') },
-        { idle: '1', hover: t('hero.steps.forest') },
-        { idle: '2', hover: t('hero.steps.urban') },
-        { idle: '3', hover: t('hero.steps.energy') }
+        { idle: '1', hover: t('hero.steps.progress') },
+        { idle: '2', hover: t('hero.steps.whatis') },
+        { idle: '3', hover: t('hero.steps.join') }
     ];
 
     const handleStepClick = (index) => {
         setActiveStep(index);
-        const sectionId = index === 0 ? 'hero' : `theme-0${index}`;
+        const sectionIds = ['hero', 'themes', 'announcement', 'joinMovement'];
+        const sectionId = sectionIds[index];
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });

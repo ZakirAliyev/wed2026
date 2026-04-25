@@ -1,5 +1,5 @@
 import './index.scss';
-import { FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaTwitter, FaTiktok } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 

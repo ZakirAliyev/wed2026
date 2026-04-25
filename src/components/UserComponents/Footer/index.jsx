@@ -20,9 +20,6 @@ function Footer() {
                     <p className="quote-text">
                         {t('footer.quoteLine1')}<br />
                         {t('footer.quoteLine2')}
-                        <span className="hashtag" style={{ display: 'block', marginTop: '12px', fontSize: '0.85em', opacity: 0.8 }}>
-                            {t('footer.hashtag')}
-                        </span>
                     </p>
                 </motion.div>
 

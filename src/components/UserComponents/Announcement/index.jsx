@@ -4,6 +4,8 @@ import { HiOutlineArrowUpRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+import { Link } from 'react-router-dom';
+
 function Announcement() {
     const { t } = useTranslation();
     const fadeUp = {
@@ -33,9 +35,11 @@ function Announcement() {
                         {t('announcement.description')}
                     </motion.p>
 
-                    <motion.a href="#" className="cta-btn" variants={fadeUp}>
-                        <span>{t('announcement.readMore')}</span>
-                    </motion.a>
+                    <motion.div variants={fadeUp}>
+                        <Link to="/about" className="cta-btn">
+                            <span>{t('announcement.readMore')}</span>
+                        </Link>
+                    </motion.div>
                 </motion.div>
 
 

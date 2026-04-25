@@ -20,6 +20,9 @@ function Footer() {
                     <p className="quote-text">
                         {t('footer.quoteLine1')}<br />
                         {t('footer.quoteLine2')}
+                        <span className="hashtag" style={{ display: 'block', marginTop: '12px', fontSize: '0.85em', opacity: 0.8 }}>
+                            {t('footer.hashtag')}
+                        </span>
                     </p>
                 </motion.div>
 
@@ -39,7 +42,9 @@ function Footer() {
                     </motion.div>
 
                     <div className="footer-copyright">
-                        <p>{t('footer.copyright')}</p>
+                        <a href="https://eco.gov.az/" target="_blank" rel="noopener noreferrer">
+                            <p>{t('footer.copyright')}</p>
+                        </a>
                     </div>
                 </div>
 

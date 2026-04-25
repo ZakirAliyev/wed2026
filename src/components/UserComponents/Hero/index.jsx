@@ -94,8 +94,8 @@ function Hero() {
                 >
                     <span>{t('hero.followUs')}</span>
                     <div className="social-icons">
-                        <a href="#"><FaInstagram /></a>
-                        <a href="#"><FaFacebookF /></a>
+                        <a href="https://www.instagram.com/ecogovaz/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                        <a href="https://www.facebook.com/share/1Gdf69Crvd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
                     </div>
                 </motion.div>
 
@@ -117,15 +117,17 @@ function Hero() {
                     <motion.p className="hosted" variants={itemVariants}>
                         {t('hero.scrollDown')}
                         <img src={arrow} alt={"bottom"} className={"arrow"} />
-                        {t('hero.hostedBy')} <span>{t('hero.ministryName')}</span>
+                        {t('hero.hostedBy')} <a href="https://eco.gov.az/" target="_blank" rel="noopener noreferrer"><span>{t('hero.ministryName')}</span></a>
                     </motion.p>
 
-                    <motion.div className="location-pill" variants={itemVariants}>
-                        <img src={locationIcon} alt="Location" className="icon" />
-                        <span>{t('hero.location')}</span>
-                        <img src={calendarIcon} alt="Calendar" className="icon" />
-                        <span>{t('hero.date')}</span>
-                    </motion.div>
+                    <a href="https://maps.app.goo.gl/TJevqGMpqxCqraU97" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                        <motion.div className="location-pill" variants={itemVariants}>
+                            <img src={locationIcon} alt="Location" className="icon" />
+                            <span>{t('hero.location')}</span>
+                            <img src={calendarIcon} alt="Calendar" className="icon" />
+                            <span>{t('hero.date')}</span>
+                        </motion.div>
+                    </a>
 
                 </motion.div>
 

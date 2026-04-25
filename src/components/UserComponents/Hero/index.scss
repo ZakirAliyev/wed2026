@@ -270,9 +270,18 @@
       margin-bottom: 20px;
       line-height: 1.6;
 
-      span {
+      a {
+        color: inherit;
         text-decoration: underline;
-        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #E0DD58;
+        }
+
+        span {
+          text-decoration: inherit;
+        }
       }
     }
 

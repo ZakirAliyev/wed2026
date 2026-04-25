@@ -37,7 +37,8 @@ function ContactUs() {
                     <motion.div className="social-follow" variants={fadeUp}>
                         <span>{t('contactUs.followUs')}</span>
                         <div className="social-icons">
-                            <a href="#"><FaInstagram /></a>
+                            <a href="https://www.instagram.com/ecogovaz/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                            <a href="https://www.facebook.com/share/1Gdf69Crvd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
                             <a href="#"><FaTwitter /></a>
                             <a href="#"><FaTiktok /></a>
                         </div>

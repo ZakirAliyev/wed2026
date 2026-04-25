@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import './index.scss';
-import { HiOutlineArrowUpRight } from 'react-icons/hi2';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import videoSrc from '../../../assets/join-movement-video.webm';
 
 function JoinMovement() {
     const { t } = useTranslation();
@@ -26,7 +26,6 @@ function JoinMovement() {
     
     // Video/Background transform - subtle parallax
     const yVideo = useTransform(smoothProgress, [0, 1], ["0%", "-10%"]);
-    const opacity = useTransform(smoothProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
     return (
         <section ref={containerRef} className="join-scroll-wrapper">
@@ -36,19 +35,22 @@ function JoinMovement() {
                     style={{ y: yVideo }}
                 >
                     <div className="video-shield"></div>
-                    <iframe 
-                        src="https://www.youtube.com/embed/excOjuhP2tg?autoplay=1&mute=1&controls=0&loop=1&playlist=excOjuhP2tg&modestbranding=1&rel=0&iv_load_policy=3&vq=hd2160&disablekb=1&playsinline=1&fs=0&autohide=1&showinfo=0" 
-                        title="YouTube video player" 
-                        frameBorder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        className="background-video-iframe"
-                    ></iframe>
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        className="background-video-native"
+                    >
+                        <source src={videoSrc} type="video/webm" />
+                        Your browser does not support the video tag.
+                    </video>
                 </motion.div>
                 <div className="join-overlay">
                     <div className="container">
                         <motion.div 
                             className="join-content"
-                            style={{ opacity }}
                         >
                             <motion.h2 style={{ y: yTitle }}>
                                 {t('joinMovement.title')}
@@ -61,7 +63,6 @@ function JoinMovement() {
                             <motion.div style={{ y: yBtn }}>
                                 <a href="#" className="join-btn">
                                     <span>{t('joinMovement.register')}</span>
-                                    <HiOutlineArrowUpRight />
                                 </a>
                             </motion.div>
                         </motion.div>

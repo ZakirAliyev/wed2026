@@ -35,7 +35,6 @@ function Announcement() {
 
                     <motion.a href="#" className="cta-btn" variants={fadeUp}>
                         <span>{t('announcement.readMore')}</span>
-                        <HiOutlineArrowUpRight />
                     </motion.a>
                 </motion.div>
 

@@ -1,7 +1,7 @@
 import './index.scss';
 import tebiet from '../../../assets/tebiet.webp';
 import tebiet2 from '../../../assets/tebiet2.webp';
-import tebiet3 from '../../../assets/tebiet3.webp';
+import tebiet3 from '../../../assets/tebiet3.jpeg';
 import arrow from '../../../assets/arrow.webp';
 
 import { useTranslation } from 'react-i18next';
@@ -79,9 +79,6 @@ function Themes() {
                             <span className="theme-number">{theme.number}</span>
                             <h2 className="theme-title">{theme.title}</h2>
                             <p className="theme-desc">{theme.description}</p>
-                            <a href="#" className="theme-link">{theme.linkText}
-                                <img src={arrow} alt='Arrow'/>
-                            </a>
                         </motion.div>
                         <motion.div 
                             className="theme-image"

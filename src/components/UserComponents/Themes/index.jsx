@@ -1,7 +1,7 @@
 import './index.scss';
-import tebiet from '../../../assets/tebiet.webp';
-import tebiet2 from '../../../assets/tebiet2.webp';
-import tebiet3 from '../../../assets/tebiet3.jpeg';
+import forest from '../../../assets/forest.jpeg';
+import plant from '../../../assets/plant.jpeg';
+import energy from '../../../assets/energy.jpeg';
 import arrow from '../../../assets/arrow.webp';
 
 import { useTranslation } from 'react-i18next';
@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 function Themes() {
     const { t } = useTranslation();
     const isMobile = useMediaQuery({ maxWidth: "768px" });
-    const themeImages = [tebiet, tebiet2, tebiet3];
+    const themeImages = [forest, plant, energy];
 
     const themes = [
         {

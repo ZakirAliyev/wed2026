@@ -1,7 +1,7 @@
 #footer {
   position: relative;
-  background: url('../../../assets/tebiet5.webp') center bottom / cover no-repeat;
-  aspect-ratio: 20 / 10;
+  background: url('../../../assets/footer.jpeg') center bottom / cover no-repeat;
+  aspect-ratio: 20 / 13;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -129,8 +129,16 @@
 
     .footer-text .quote-text {
       font-size: 28px;
-      margin-top: -200px;
+      margin-top: -150px;
     }
+
+    aspect-ratio: 9 / 16;
+    height: auto;
+    width: 100%;
+    min-height: auto;
+    background-image: url('../../../assets/9-16. 2.png');
+    background-position: center top;
+    background-size: cover;
 
     .footer-partners {
       flex-wrap: nowrap;
@@ -154,7 +162,7 @@
     .footer-text .quote-text {
       font-size: 22px;
       line-height: 1.35;
-      margin-top: -200px;
+      margin-top: -120px;
     }
 
     .footer-partners {

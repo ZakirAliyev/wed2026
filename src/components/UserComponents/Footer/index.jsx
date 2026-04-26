@@ -17,10 +17,7 @@ function Footer() {
                     transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
                     viewport={{ once: true }}
                 >
-                    <p className="quote-text">
-                        {t('footer.quoteLine1')}<br />
-                        {t('footer.quoteLine2')}
-                    </p>
+        
                 </motion.div>
 
 

@@ -54,11 +54,19 @@
 
     .nenemki {
       margin-bottom: 40px;
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
     }
 
     .social-follow {
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: 992px) {
+        align-items: start;
+      }
       gap: 20px;
 
       span {
@@ -104,8 +112,6 @@
 
     .contact-info {
       max-width: 100%;
-      text-align: center;
-      align-items: center;
 
       h2 {
         font-size: 36px;

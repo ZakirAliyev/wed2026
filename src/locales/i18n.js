@@ -19,6 +19,10 @@ i18n
         resources,
         fallbackLng: 'en',
         supportedLngs: ['en', 'az', 'ru'],
+        detection: {
+            order: ['localStorage', 'cookie', 'htmlTag', 'memory'],
+            caches: ['localStorage'],
+        },
         interpolation: {
             escapeValue: false,
         },

@@ -8,6 +8,7 @@ import logoFav from "../../../assets/logoFav.png";
 import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark, HiOutlineSquares2X2, HiOutlineGlobeAlt, HiChevronDown } from 'react-icons/hi2';
 import Countdown from '../Countdown';
 import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../context/LanguageContext';
 
 function Navbar() {
     const { t, i18n } = useTranslation();
@@ -50,8 +51,10 @@ function Navbar() {
         };
     }, []);
 
+    const { changeLanguage: updateLanguage } = useLanguage();
+
     const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
+        updateLanguage(lng);
         setLangOpen(false);
     };
 

@@ -1,7 +1,7 @@
 #footer {
   position: relative;
-  background: url('../../../assets/footer.jpeg') center bottom / cover no-repeat;
-  aspect-ratio: 20 / 13;
+  background: var(--footer-bg) center bottom / cover no-repeat;
+  aspect-ratio: 20 / 11;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@
       img {
         max-width: 100%;
         height: auto;
-        max-height:150px;
+        max-height: 125px;
         object-fit: contain;
         filter: brightness(1.1);
       }
@@ -136,7 +136,7 @@
     height: auto;
     width: 100%;
     min-height: auto;
-    background-image: url('../../../assets/9-16. 2.png');
+    background-image: var(--footer-mob-bg);
     background-position: center top;
     background-size: cover;
 

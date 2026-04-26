@@ -1,7 +1,7 @@
 import './index.scss';
-import forest from '../../../assets/forest.jpeg';
-import plant from '../../../assets/plant.jpeg';
-import energy from '../../../assets/energy.jpeg';
+import forest from '../../../assets/forest.webp';
+import plant from '../../../assets/plant.webp';
+import energy from '../../../assets/energy.webp';
 import arrow from '../../../assets/arrow.webp';
 
 import { useTranslation } from 'react-i18next';

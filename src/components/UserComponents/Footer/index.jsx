@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 // English assets
-import footerEng from '../../../assets/1920 1080.png';
-import mobileEng from '../../../assets/9-16. 2.png';
+import footerEng from '../../../assets/footer-pc-eng.webp';
+import mobileEng from '../../../assets/footer-mob-eng.webp';
 
 // Azerbaijani assets
-import webAz from '../../../assets/AZ.png';
-import mobileAz from '../../../assets/9-16 AZ.png';
+import webAz from '../../../assets/footer-pc-az.webp';
+import mobileAz from '../../../assets/footer-mob-az.webp';
 
 function Footer() {
     const { t, i18n } = useTranslation();

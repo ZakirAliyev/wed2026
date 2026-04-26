@@ -4,7 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import './index.scss';
 import logo from "../../../assets/logo.webp";
-import logoFav from "../../../assets/logoFav.png";
+import logoFav from "../../../assets/logo-fav.webp";
 import { HiOutlineArrowUpRight, HiOutlineBars3, HiOutlineXMark, HiOutlineSquares2X2, HiOutlineGlobeAlt, HiChevronDown } from 'react-icons/hi2';
 import Countdown from '../Countdown';
 import { useTranslation } from 'react-i18next';

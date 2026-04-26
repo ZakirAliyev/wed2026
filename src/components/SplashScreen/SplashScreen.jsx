@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SplashScreen.scss';
-import alphaVideo from '../../assets/logo alpha 2 (online-video-cutter.com).mp4';
+import alphaVideo from '../../assets/logo mp4.mp4';
 
 const SplashScreen = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,7 +9,7 @@ const SplashScreen = ({ onComplete }) => {
     // 8-second safety timer
     const timer = setTimeout(() => {
       handleComplete();
-    }, 8000);
+    }, 2600);
 
     return () => clearTimeout(timer);
   }, []);

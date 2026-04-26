@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import './index.scss';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import videoSrc from '../../../assets/join-movement-video.webm';
+import videoSrc from '../../../assets/qax4.webm';
 
 function JoinMovement() {
     const { t } = useTranslation();

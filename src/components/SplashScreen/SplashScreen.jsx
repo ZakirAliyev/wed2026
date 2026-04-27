@@ -6,6 +6,7 @@ const SplashScreen = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    // 8-second safety timer
     const timer = setTimeout(() => {
       handleComplete();
     }, 2600);

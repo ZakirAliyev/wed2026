@@ -1,5 +1,5 @@
 import './index.scss';
-import footerLogos from '../../../assets/Group 1.png';
+import footerLogos from '../../../assets/Group 1.webp';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
@@ -50,7 +50,7 @@ function Footer() {
                         viewport={{ once: false }}
                     >
                         <div className="partner-combined-logos">
-                            <img src={footerLogos} alt="Partners" />
+                            <img src={footerLogos} alt="Partners" loading="lazy" />
                         </div>
                     </motion.div>
 

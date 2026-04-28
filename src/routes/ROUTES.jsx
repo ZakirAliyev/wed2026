@@ -1,6 +1,8 @@
-import MainPage from "../pages/UserPages/index.jsx";
-import HomePage from "../pages/UserPages/HomePage/index.jsx";
-import AboutPage from "../pages/UserPages/AboutPage/index.jsx";
+import { lazy } from 'react';
+
+const MainPage = lazy(() => import("../pages/UserPages/index.jsx"));
+const HomePage = lazy(() => import("../pages/UserPages/HomePage/index.jsx"));
+const AboutPage = lazy(() => import("../pages/UserPages/AboutPage/index.jsx"));
 
 export const ROUTES = [
     {

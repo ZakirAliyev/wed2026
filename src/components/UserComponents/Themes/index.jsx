@@ -87,7 +87,7 @@ function Themes() {
                             whileInView="visible"
                             viewport={{ once: false, margin: "-100px" }}
                         >
-                            <img src={themeImages[index]} alt={theme.title} />
+                            <img src={themeImages[index]} alt={theme.title} loading="lazy" />
                         </motion.div>
                     </div>
 

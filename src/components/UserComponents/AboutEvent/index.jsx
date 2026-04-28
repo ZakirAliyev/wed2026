@@ -40,7 +40,7 @@ function AboutEvent() {
                     >
                         <div className="circular-logo-wrap">
                             {/* Using main logo as placeholder, styled in SCSS to look like wood-carved */}
-                            <img src={iamge1} alt="WED logo" />
+                            <img src={iamge1} alt="WED logo" loading="lazy" />
                         </div>
                     </motion.div>
 

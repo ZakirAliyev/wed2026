@@ -120,6 +120,7 @@ function Hero() {
                         {t('hero.hostedBy')} <a href="https://eco.gov.az/" target="_blank" rel="noopener noreferrer"><span>{t('hero.ministryName')}</span></a>
                     </motion.p>
 
+
                     <a href="https://maps.app.goo.gl/TJevqGMpqxCqraU97" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                         <motion.div className="location-pill" variants={itemVariants}>
                             <img src={locationIcon} alt="Location" className="icon" />

@@ -1,5 +1,6 @@
 import './index.scss';
 import footerLogos from '../../../assets/Group 1.webp';
+import footerLogosAz from '../../../assets/WED2026-White-AZ-UN.png';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
@@ -9,7 +10,7 @@ import mobileEng from '../../../assets/footer-mob-eng.webp';
 
 // Azerbaijani assets
 import webAz from '../../../assets/AZ.png';
-import mobileAz from '../../../assets/AZ.png';
+import mobileAz from '../../../assets/footer-mob-eng.webp';
 
 function Footer() {
     const { t, i18n } = useTranslation();
@@ -17,6 +18,7 @@ function Footer() {
     
     const desktopBg = isAz ? webAz : footerEng;
     const mobileBg = isAz ? mobileAz : mobileEng;
+    const currentLogos = isAz ? footerLogosAz : footerLogos;
 
     return (
         <section 
@@ -50,7 +52,7 @@ function Footer() {
                         viewport={{ once: false }}
                     >
                         <div className="partner-combined-logos">
-                            <img src={footerLogos} alt="Partners" loading="lazy" />
+                            <img src={currentLogos} alt="Partners" loading="lazy" />
                         </div>
                     </motion.div>
 

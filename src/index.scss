@@ -64,6 +64,7 @@ a,
   @include generate-cols('col-xs-');
 }
 
+
 .main-content {
   &.loading {
     opacity: 0;
@@ -74,4 +75,4 @@ a,
     visibility: visible;
     transition: opacity 0.4s ease;
   }
-}
+}

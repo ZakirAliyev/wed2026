@@ -1,6 +1,6 @@
 import './index.scss';
 import forest from '../../../assets/forest.webp';
-import plant from '../../../assets/plant.webp';
+import plant from '../../../assets/114.jpg (1).jpeg';
 import energy from '../../../assets/333.png';
 import arrow from '../../../assets/arrow.webp';
 
@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 function Themes() {
     const { t } = useTranslation();
     const isMobile = useMediaQuery({ maxWidth: "768px" });
-    const themeImages = [forest, plant, energy];
+    const themeImages = [forest, energy, plant];
 
     const themes = [
         {
@@ -37,8 +37,8 @@ function Themes() {
 
     const cardVariants = {
         hidden: { opacity: 0, y: isMobile ? 30 : 50 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
             transition: {
                 duration: 0.8,
@@ -48,13 +48,13 @@ function Themes() {
     };
 
     const imageVariants = {
-        hidden: { 
-            scale: isMobile ? 1 : 0.9, 
+        hidden: {
+            scale: isMobile ? 1 : 0.9,
             opacity: 0,
             y: isMobile ? 20 : 0
         },
-        visible: { 
-            scale: 1, 
+        visible: {
+            scale: 1,
             opacity: 1,
             y: 0,
             transition: {
@@ -69,7 +69,7 @@ function Themes() {
             <div className="container">
                 {themes.map((theme, index) => (
                     <div className={`theme-item ${theme.reverse ? 'reverse' : ''}`} key={index} id={`theme-${theme.number}`}>
-                        <motion.div 
+                        <motion.div
                             className="theme-content"
                             variants={cardVariants}
                             initial="hidden"
@@ -80,7 +80,7 @@ function Themes() {
                             <h2 className="theme-title">{theme.title}</h2>
                             <p className="theme-desc">{theme.description}</p>
                         </motion.div>
-                        <motion.div 
+                        <motion.div
                             className="theme-image"
                             variants={imageVariants}
                             initial="hidden"

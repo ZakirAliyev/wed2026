@@ -27,6 +27,17 @@
     p {
       font-weight: 300;
       color: #E8E8E8;
+
+      a {
+        color: #8DAD45;
+        text-decoration: underline;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 

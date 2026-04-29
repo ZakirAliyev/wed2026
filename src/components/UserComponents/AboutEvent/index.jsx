@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import { useMediaQuery } from "react-responsive";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 function AboutEvent() {
     const { t } = useTranslation();
@@ -15,7 +15,7 @@ function AboutEvent() {
         <section id="aboutEvent">
             <div className="container">
                 <div className="about-grid">
-                    <motion.div 
+                    <motion.div
                         className="text-side"
                         initial={{ opacity: 0, x: isMobile ? 0 : -50, y: isMobile ? 20 : 0 }}
                         whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -26,12 +26,15 @@ function AboutEvent() {
                         <p>
                             {t('aboutEvent.description1')}
                             <br /><br />
-                            {t('aboutEvent.description2')}
+                            <Trans
+                                i18nKey="aboutEvent.description2"
+                                components={[<a key="0" href="https://www.worldenvironmentday.global/2026/about/theme-and-host" target="_blank" rel="noopener noreferrer" />]}
+                            />
                             <br /><br />
                             {t('aboutEvent.description3')}
                         </p>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className="image-side"
                         initial={{ opacity: 0, x: isMobile ? 0 : 50, y: isMobile ? 20 : 0 }}
                         whileInView={{ opacity: 1, x: 0, y: 0 }}

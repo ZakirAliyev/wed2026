@@ -10,7 +10,7 @@ import mobileEng from '../../../assets/footer-mob-eng.webp';
 
 // Azerbaijani assets
 import webAz from '../../../assets/AZ.png';
-import mobileAz from '../../../assets/footer-mob-eng.webp';
+import mobileAz from '../../../assets/9-16 AZ.webp';
 
 function Footer() {
     const { t, i18n } = useTranslation();

@@ -1,43 +1,43 @@
-name: Auto Deploy React App to Plesk via FTP
+name: Deploy React to VPS (Password)
 
 on:
   push:
     branches:
-      - main  # Eğer başka branch kullanıyorsan değiştir
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
       - name: Install dependencies
-        run: npm install --force
+        run: npm install
 
-      - name: Build React project
+      - name: Build project
         run: npm run build
 
-      - name: Check if dist directory exists
-        run: |
-          if [ ! -d "dist" ]; then
-            echo "Dist directory not found!"; exit 1;
-          fi
-
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Copy files to VPS via SCP (password)
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: httpdocs/
+          host: ${{ secrets.VPS_HOST }}
+          username: root
+          password: ${{ secrets.VPS_PASSWORD }}
+          source: "build/*"
+          target: "/var/www/frontend2"
 
-      - name: Cleanup old files (optional)
-        run: rm -rf dist
+      - name: Restart Nginx
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: root
+          password: ${{ secrets.VPS_PASSWORD }}
+          script: |
+            systemctl reload nginx

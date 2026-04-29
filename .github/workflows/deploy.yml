@@ -24,13 +24,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Copy files to VPS via SCP (password)
+      - name: Copy files to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: root
           password: ${{ secrets.VPS_PASSWORD }}
-          source: "build/*"
+          source: "dist/**"
           target: "/var/www/frontend2"
 
       - name: Restart Nginx

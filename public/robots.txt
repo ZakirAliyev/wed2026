@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wed2026.az/sitemap.xml

@@ -63,7 +63,7 @@
 
   <link rel="canonical" href="https://wed2026.az/" />
 
-  <!-- Structured Data: Knowledge Graph (Website, GovernmentOrganization, Event) -->
+  <!-- Structured Data: Knowledge Graph (Website, GovernmentOrganization, Event, Sitelinks) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -77,7 +77,12 @@
           "publisher": {
             "@id": "https://wed2026.az/#organization"
           },
-          "inLanguage": ["en-US", "az-AZ"]
+          "inLanguage": ["en-US", "az-AZ"],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wed2026.az/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         },
         {
           "@type": "GovernmentOrganization",
@@ -85,7 +90,12 @@
           "name": "Ministry of Ecology and Natural Resources of Azerbaijan",
           "alternateName": "Azərbaycan Respublikası Ekologiya və Təbii Sərvətlər Nazirliyi",
           "url": "https://eco.gov.az/",
-          "logo": "https://wed2026.az/logo.webp",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wed2026.az/logo.webp",
+            "width": "600",
+            "height": "60"
+          },
           "sameAs": [
             "https://www.facebook.com/ecogovaz",
             "https://www.instagram.com/ecogovaz/",
@@ -93,16 +103,53 @@
           ]
         },
         {
+          "@type": "BreadcrumbList",
+          "@id": "https://wed2026.az/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://wed2026.az/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About WED 2026",
+              "item": "https://wed2026.az/about"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Main Navigation",
+          "description": "Main sections of the World Environment Day 2026 website",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://wed2026.az/",
+              "name": "Home"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://wed2026.az/about",
+              "name": "About Event"
+            }
+          ]
+        },
+        {
           "@type": "Event",
           "@id": "https://wed2026.az/#event",
           "name": "World Environment Day 2026 (WED 2026)",
-          "description": "The 2026 celebration of World Environment Day (WED), hosted by Azerbaijan in Baku, focuses on climate action, green energy transition, and nature-based solutions to environmental crises.",
+          "description": "The 2026 celebration of World Environment Day (WED), hosted by Azerbaijan in Baku, focuses on climate action, green energy transition, and nature-based solutions.",
           "startDate": "2026-06-05T09:00:00+04:00",
           "endDate": "2026-06-06T18:00:00+04:00",
           "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "url": "https://wed2026.az/",
-          "image": "https://wed2026.az/og-image.webp",
+          "image": "https://wed2026.az/og-image.png",
           "location": {
             "@type": "Place",
             "name": "Heydar Aliyev Center",
@@ -124,7 +171,7 @@
           },
           "offers": {
             "@type": "Offer",
-            "url": "https://wed2026.az/#join",
+            "url": "https://wed2026.az/",
             "price": "0",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",

@@ -13,7 +13,7 @@ export default defineConfig({
     host: '0.0.0.0',
   },
   build: {
-    target: 'esnext',
+    target: 'es2015',
     minify: 'esbuild',
     sourcemap: false,
     cssMinify: true,

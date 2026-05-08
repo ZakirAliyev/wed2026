@@ -63,11 +63,11 @@
     .social-follow {
       display: flex;
       align-items: center;
+      gap: 20px;
 
       @media screen and (max-width: 992px) {
         align-items: start;
       }
-      gap: 20px;
 
       span {
         font-size: 14px;

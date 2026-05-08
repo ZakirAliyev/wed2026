@@ -5,6 +5,7 @@ import alphaVideo from '../../assets/logo mp4.mp4';
 const SplashScreen = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       handleComplete();

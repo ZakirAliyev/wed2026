@@ -62,7 +62,7 @@ function JoinMovement() {
 
                             <motion.div style={{ y: yBtn }}>
     <a 
-        href="mailto:info@wed2026.az" 
+        href="mailto:partners@wed2026.az" 
         className="join-btn"
     >
         <span>{t('joinMovement.register')}</span>

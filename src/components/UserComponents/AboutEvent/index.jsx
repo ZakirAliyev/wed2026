@@ -32,6 +32,15 @@ function AboutEvent() {
                             />
                             <br /><br />
                             {t('aboutEvent.description3')}
+                            <br /><br />
+                            <Trans
+                                i18nKey="aboutEvent.description4"
+                                components={[
+                                    <a key="0" href="https://www.worldenvironmentday.global/2026/about/2026-campaign" target="_blank" rel="noopener noreferrer" />
+                                ]}
+                            />
+                            <br /><br />
+                            {t('aboutEvent.description5')}
                         </p>
                     </motion.div>
                     <motion.div

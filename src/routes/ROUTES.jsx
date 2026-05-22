@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const MainPage = lazy(() => import("../pages/UserPages/index.jsx"));
 const HomePage = lazy(() => import("../pages/UserPages/HomePage/index.jsx"));
@@ -18,5 +19,21 @@ export const ROUTES = [
                 element: <AboutPage/>,
             }
         ]
+    },
+    {
+        path: 'en',
+        element: <Navigate to="/" replace />
+    },
+    {
+        path: 'az',
+        element: <Navigate to="/" replace />
+    },
+    {
+        path: 'en/*',
+        element: <Navigate to="/" replace />
+    },
+    {
+        path: 'az/*',
+        element: <Navigate to="/" replace />
     }
 ];

@@ -13,8 +13,18 @@ function Partners() {
     const { t, i18n } = useTranslation();
     const currentLang = (i18n.language || 'en').toLowerCase().substring(0, 2);
 
-    // Helper to find logo URL by base filename (case insensitive)
+    // Helper to find logo URL by base filename (case insensitive), prioritizing WebP
     const findLogo = (name) => {
+        // First, try to find a WebP version
+        const webpKey = Object.keys(logos).find(k => {
+            const full = k.split('/').pop();
+            const base = full.split('.').shift();
+            const ext = full.split('.').pop().toLowerCase();
+            return base.toLowerCase() === name.toLowerCase() && ext === 'webp';
+        });
+        if (webpKey) return logos[webpKey];
+
+        // Fallback to any other format
         const key = Object.keys(logos).find(k => {
             const base = k.split('/').pop().split('.').shift();
             return base.toLowerCase() === name.toLowerCase();

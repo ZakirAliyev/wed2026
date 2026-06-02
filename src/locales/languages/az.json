@@ -58,7 +58,7 @@
     },
     "contactUs": {
         "tag": "Ümumdünya Ətraf Mühit Günü 2026",
-        "title": "WED 2026 Bizimlə əlaqə",
+        "title": "Bizimlə əlaqə",
         "description": "Sorğular, tərəfdaşlıq imkanları və ya WED 2026 ilə bağlı əlavə məlumat üçün bizimlə əlaqə saxlayın. Komandamız ideyalarınızı dəstəkləməyə, iştirakınızı yönləndirməyə və daha dayanıqlı və davamlı gələcəyə töhfə verən təşəbbüslərdə sizinlə əməkdaşlıq etməyə hazırdır.",
         "emailLabel": "E-poçt",
         "followUs": "Bizi izləyin:"
@@ -72,5 +72,9 @@
         "quoteLine2": "İqlim naminə. Gələcəyimiz naminə.",
         "hashtag": "#İndiİqlimNaminə",
         "copyright": "© 2026 Azərbaycan Respublikasının Ekologiya və Təbii Sərvətlər Nazirliyi"
+    },
+    "partners": {
+        "tag": "Ümumdünya Ətraf Mühit Günü 2026",
+        "title": "Tərəfdaşlar"
     }
 }

@@ -3,6 +3,7 @@ import Footer from "../../../components/UserComponents/Footer/index.jsx";
 import AboutHero from "../../../components/UserComponents/AboutHero/index.jsx";
 import AboutEvent from "../../../components/UserComponents/AboutEvent/index.jsx";
 import ContactUs from "../../../components/UserComponents/ContactUs/index.jsx";
+import Partners from "../../../components/UserComponents/Partners/index.jsx";
 import SEO from "../../../components/SEO/index.jsx";
 import "./index.scss";
 
@@ -20,6 +21,7 @@ function AboutPage() {
             </section>
             <main id="aboutMainContent">
                 <AboutEvent />
+                <Partners />
                 <ContactUs />
                 <Footer />
             </main>
